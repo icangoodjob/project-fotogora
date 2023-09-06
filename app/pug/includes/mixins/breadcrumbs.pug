@@ -1,0 +1,10 @@
+mixin breadcrumbs(items)
+	div.breadcrumbs
+		.container
+			nav.breadcrumbs__navigation
+				ul.breadcrumbs__list
+					each item, index in items
+						li.breadcrumbs__item
+							a(href="/" class="breadcrumbs__link" title=item)= item
+					if block 
+						block

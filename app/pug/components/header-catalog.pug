@@ -1,0 +1,12 @@
+.menu-catalog
+	.container
+		.menu-catalog__body#menu-catalog
+			.menu-catalog__wrapper
+				- let i = 0;
+					while i < 6
+						.menu-catalog__column
+							ul.menu-catalog__list
+								each listItem, indexItem in menuCatalog
+									li.menu-catalog__item(class={active: i == 0 && indexItem == 2})
+										a(href=listItem.link).menu-catalog__link= listItem.title
+								- i += 1;

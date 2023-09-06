@@ -1,0 +1,158 @@
+extends includes/layout.pug
+
+append variables
+	- let pageTitle = "Карточка товара";
+	- description += pageTitle;
+block breadcrumbs
+	- let crumbs = ['Фотогора', 'Студийный свет', 'Комплекты импульсного света'];
+		+breadcrumbs(crumbs)
+			li.breadcrumbs__item.active Godox MS300V-D комплект студийного оборудования
+block content
+	section.main-card.card
+		.main-card__container 
+			.main-card__wrapper 
+				.main-card__slider.card-slider
+					.thumbs-slider
+						.thumbs-slider-wrapper.swiper
+							.thumbs-slider-body.swiper-wrapper
+								each item in mainCard.slider
+									.thumbs-slider-item.swiper-slide
+										.thumbs-slider-image 
+											img(src=`images/main-card/product-${item.img}.png`, alt="маленькое изображение товара")
+					.main-slider-wrapper.swiper
+						.main-slider-body.swiper-wrapper
+							each item, index in mainCard.slider
+								.main-slider-item.swiper-slide
+									.main-slider-image 
+										if index == 0
+											a(href=`files/fotogora.mp4` data-fslightbox="gallery")
+												video(class="video-player" poster=`images/main-card/product-1.png`)
+													source(src="files/fotogora.mp4" type="video/mp4")
+											button(type="button").play-button
+										else
+											a(href=`images/main-card/product-${item.img}.png` data-fslightbox="gallery")
+												img(src=`images/main-card/product-${item.img}.png`, alt="большое изображение товара")
+						.main-slider__controls.slider-controls
+							button(type="button").slider-button.slider-button-prev
+							button(type="button").slider-button.slider-button-next
+					.main-slider__pagination.slider-pagination
+				.main-card__info.card-info
+					h1.card-info__title Godox MS300V-D комплект студийного оборудования
+					.card-info__logo 
+						img(src="images/main-card/product-logo.png", alt="")
+					.card-info__article Артикул: #[span MTG-1366] 
+					.card-info__rating.rating
+						ul.rating__list.r-4
+							li.rating__item 
+							li.rating__item 
+							li.rating__item 
+							li.rating__item 
+							li.rating__item
+						.rating__value 4.7 (32 отзыва)
+					.card-info__links 
+						a(href="#specifications").card-info__link Характеристики
+						a(href="#complete").card-info__link Комплектация
+					.card-info__options.card-options
+						.card-options__group
+							.card-options__label Размер:
+							.radiobutton-group
+								+radiobutton('radiobutton-group__item', 'size[]', '190х2100 мм', false)
+								+radiobutton('radiobutton-group__item', 'size[]', '150х2100 мм', true)
+						.card-options__group
+							.card-options__label Комплектация:
+							.radiobutton-group
+								+radiobutton('radiobutton-group__item', 'complete[]', 'Полный набор', false)
+								+radiobutton('radiobutton-group__item', 'complete[]', 'Неполный набор', false)
+								+radiobutton('radiobutton-group__item', 'complete[]', 'Только свет', true)
+				aside.main-card__aside.card-aside
+					.card-aside__body
+						.main-card__prices
+							.main-card__price 47 890 ₽
+							.main-card__old-price 47 890 ₽
+							span.main-card__sale -56%
+						button(type="button").main-card__favorites.favorites-btn Добавить в избранное
+						.main-card__having Товар не в наличии
+						button(type="button").main-card__status Оповестить о поступлении
+						button(type="button").main-card__btn.product-btn В корзину
+						a(href="#").card-aside__link Доставка по России 
+						a(href="#").card-aside__link Кредит и рассрочка
+				.main-card__sections 
+					section.main-card__section 
+						.heading 
+							h2.heading__title Описание
+						.main-card__content
+							p Комплект серии AXIO представляет собой готовое решение для домашней или профессиональной фотостудии. В комплект входят три моноблока Raylab Axio III RX-300, мощностью 300Дж каждый, два стандартных 7-дюймовых рефлектора, три стойки Стойка Raylab LS003 2,6м с воздушной амортизацией, два прямоугольных софтбокса Raylab SPG6090 с сотами, 1 шторки с набором светофильтров для стандартного 7-дюймового рефлектора, трансмиттер радиосинхронизации и удобная прочная сумка для хранения и транспортировки.
+					section.main-card__section#specifications
+						.heading 
+							h2.heading__title Характеристики
+						.main-card__content
+							each item in mainCard.specificationsList
+								p=item.title
+								ul
+									each listItem in item.list
+										li= listItem 
+					section.main-card__section#complete 
+						.heading
+							h2.heading__title Комплектация
+						.main-card__content
+							each item in mainCard.equipmentList
+								ul
+									li= item 
+					section.main-card__section 
+						.heading
+							h2.heading__title Отзывы
+						.reviews 
+							.reviews__items
+								each item in mainCard.reviews
+									blockquote.reviews__item.item-reviews
+										header.item-reviews__header
+											.item-reviews__icon 
+												img(src=`images/main-card/reviews-icon.png`, alt=item.title)
+											.item-reviews__user-data
+												.item-reviews__name= item.userName
+												.item-reviews__rating.rating 
+													ul.rating__list(class=`r-${item.rating}`)
+														li.rating__item
+														li.rating__item
+														li.rating__item
+														li.rating__item
+														li.rating__item
+													.rating__value 4.7
+										.item-reviews__content 
+											p Часы понравились,очень красивые и хорошо впишутся в любой интерьер, инструкция на английском,но настроить очень просто,не прибегая к переводу на русский язык,все понятно и доступно, яркость пять уровней, встроенный аккумулятор, температура, влажность и день недели.Часами доволен,быстрая доставка,хотя заказывал через почту,доставили за четыре дня,упаковано качественно,товар соответствует описанию,рекомендую,часы на 100%!!!!!!!!
+										.item-reviews__images 
+											- let numbers = ['1', '2', '3', '4', '5'];
+											each number, index in numbers
+												if index < 3
+													.item-reviews__image 
+														img(src=`images/main-card/product-${number}.png`, alt="маленькое изображение товара")
+							.reviews__pagination
+								include components/pagination
+	section.other-products 
+		.container
+			.other-products__heading.heading
+				h2.heading__title С этим товаром покупают
+			.products-slider(data-slider="other")
+				.products-wrapper
+					.products-body
+						each item, index in products
+							include components/product
+					.products-slider__controls.slider-controls
+						button(type="button").slider-button.slider-button-prev
+						button(type="button").slider-button.slider-button-next
+				.products-slider__pagination.slider-pagination
+			include components/products-mobile
+	section.similar-products
+		.container
+			.similar-products__heading.heading
+				h2.heading__title Похожие товары
+			.products-slider(data-slider="similar")
+				.products-wrapper
+					.products-body
+						each item, index in products
+							include components/product
+					.products-slider__controls.slider-controls
+						button(type="button").slider-button.slider-button-prev
+						button(type="button").slider-button.slider-button-next
+				.products-slider__pagination.slider-pagination
+			include components/products-mobile

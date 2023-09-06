@@ -1,0 +1,125 @@
+extends includes/layout.pug
+
+append variables
+	- let pageTitle = "Каталог товаров";
+	- description += pageTitle;
+block breadcrumbs
+	- let crumbs = ['Фотогора', 'Студийный свет'];
+		+breadcrumbs(crumbs)
+			li.breadcrumbs__item.active Комплекты импульсного света
+block content
+	.catalog 
+		.container 
+			.catalog__sorting.sorting-catalog
+				.radiobutton-group
+						+radiobutton('', 'sort[]', 'Дешевле', false)
+						+radiobutton('', 'sort[]', 'Дороже', false)
+						+radiobutton('', 'sort[]', 'Популярное', false)
+						+radiobutton('', 'sort[]', '190х2100 мм', false)
+						+radiobutton('', 'sort[]', '150х2100 мм', true)
+				.sorting-catalog__actions
+					.sorting-catalog__buttons
+						button(type="button").sorting-catalog__btn.sorting-catalog__btn_filter#filter-btn Фильтры
+						button(type="button").sorting-catalog__btn.sorting-catalog__btn_sort Сортировка
+					.sorting-catalog__views.views-buttons 	
+						.views-button.views-button_grid
+						.views-button.views-button_list.active
+			.catalog__wrapper 
+				aside.catalog__aside
+					.catalog__filter.filter
+						form(action="#" class="filter__form")
+							.filter__groups
+								.filter-group
+									.filter-group__name Цена
+									.filter-group__items
+										.filter-group__item 
+											| от
+											input(type="text" class="filter-group__input")
+										.filter-group__item 
+											| до
+											input(type="text" class="filter-group__input")
+								.filter-group
+									.filter-group__name Бренд
+									.filter-group__checkboxes
+										+checkbox('brand[]', 'Falcon Eyes', false)
+										+checkbox('brand[]', 'Fotokvant', false)
+										+checkbox('brand[]', 'FST', false)
+										+checkbox('brand[]', 'Fujimi', false)
+										+checkbox('brand[]', 'Godox', false)
+										+checkbox('brand[]', 'Falcon Eyes', false)
+									button(type="button").filter-group__btn Показать все 20 брендов
+								.filter-group
+									.filter-group__name Вид
+									.filter-group__checkboxes
+										+checkbox('view[]', 'Falcon Eyes', false)
+										+checkbox('view[]', 'Fotokvant', false)
+										+checkbox('view[]', 'FST', false)
+										+checkbox('view[]', 'Fujimi', false)
+										+checkbox('view[]', 'Godox', false)
+										+checkbox('view[]', 'Falcon Eyes', false)
+									button(type="button").filter-group__btn Показать все 20 брендов
+								.filter-group
+									.filter-group__name Тип
+									.filter-group__checkboxes
+										+checkbox('type[]', 'Falcon Eyes', false)
+										+checkbox('type[]', 'Fotokvant', false)
+										+checkbox('type[]', 'FST', false)
+										+checkbox('type[]', 'Fujimi', false)
+										+checkbox('type[]', 'Godox', false)
+										+checkbox('type[]', 'Falcon Eyes', false)
+									button(type="button").filter-group__btn Показать все 20 брендов
+					.catalog__articles.articles
+						.heading.articles__heading
+							h2.heading__title Статьи
+						.articles__items
+							each item in articles
+								article.article
+									header.article__header
+										h3.article__title= item.title
+									.article__content 
+										p= item.text
+									footer.article__footer
+										a(href="#").article__btn.btn-show Читать полностью
+				.catalog__products.products-catalog
+					.products-catalog__cards.view-horizontal
+						each item, index in products 
+							include components/product
+					.products-catalog__bottom.catalog-bottom
+						include components/pagination
+						.catalog-bottom__btn 
+							a(href="#").btn-show Посмотреть архивные товары
+			.catalog__content.content-catalog
+				.heading.content-catalog__heading
+					.heading__title Комплекты импульсного света
+				.content-catalog__description
+					p
+						| Система установки фона предназначена для установки и легкой замены студийного фона. Студийный фон – необходимый элемент студии и зачастую его быстрая смена экономит не только время, но и деньги.
+					p 
+						| Системы установки фонов из магазина Фотогора упрощают работу фотографа в студии и на выезде. Они позволяют с легкостью менять задники, ускорять подготовку к съемке. Мы отбираем для каталога прочные, надежные конструкции, на которых можно закрепить тканевый, бумажный, пластиковый или другой фон, выпускаемый в рулонах или полотнах.
+					p
+						| Система установки фона предназначена для установки и легкой замены студийного фона. Студийный фон – необходимый элемент студии и зачастую его быстрая смена экономит не только время, но и деньги.
+					p
+						| Системы установки фонов из магазина Фотогора упрощают работу фотографа в студии и на выезде. Они позволяют с легкостью менять задники, ускорять подготовку к съемке. Мы отбираем для каталога прочные, надежные конструкции, на которых можно закрепить тканевый, бумажный, пластиковый или другой фон, выпускаемый в рулонах или полотнах.
+				.content-catalog__image-wrapper
+					.content-catalog__image 
+						img(src="images/catalog/content-img.jpg", alt="изображение в контенте")
+	.categories
+		.container 
+			.heading.categories__heading
+				.heading__title Другие категории
+			.categories__slider(data-slider="categories")
+				.categories__body.swiper 
+					.categories__wrapper.swiper-wrapper
+						each part in partions
+							.swiper-slide(data-slide)
+								a(href="#").item-partion
+									.item-partion__image 
+										img(src="images/partions/img.png", alt="заголовок разделы")
+									.item-partion__body
+										.item-partion__title= part
+					.categories__controls.slider-controls
+						button(type="button").slider-button.slider-button-prev
+						button(type="button").slider-button.slider-button-next
+				.categories__pagination.slider-pagination 
+
+

@@ -1,0 +1,34 @@
+footer.footer
+	div.container
+		.footer__body 
+			.footer__column 
+				a(href="/").footer__logo
+					picture
+						source(srcset=`images/footer-logo.svg` media="(min-width: 767.98px)")
+						source(srcset=`images/footer-logo-mobile.svg` media="(min-width: 320px)")
+						img(src="images/footer-logo.svg", alt="логотип фотогора")
+				.footer__links 
+					a(href="/").footer__link.footer__link_subscribe Подписка на новости
+					a(href="tel:74953631098").footer__link.footer__link_phone +7(495) 363-10-98
+					a(href="mailto:333@photogora.ru").footer__link.footer__link_email 333@photogora.ru
+			.footer__column 
+				nav.footer__menu.menu-footer
+					ul.menu-footer__list 
+						each item in menu
+							li.menu-footer__item 
+								a(href=item.link).menu-footer__link= item.title
+			.footer__column
+				.footer__left
+					.footer__social.social-footer
+						ul.social-footer__list 
+							li.social-footer__item 
+								a(href="#").social-footer__link.social-footer__link_youtube
+							li.social-footer__item 
+								a(href="#").social-footer__link.social-footer__link_email
+							li.social-footer__item 
+								a(href="#").social-footer__link.social-footer__link_vk
+							li.social-footer__item 
+								a(href="#").social-footer__link.social-footer__link_twitter
+							li.social-footer__item 
+								a(href="#").social-footer__link.social-footer__link_telegram
+					.footer__copy © 2013-2023 Фотогора. Все права защищены.

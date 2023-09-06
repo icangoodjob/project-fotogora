@@ -1,0 +1,42 @@
+article.products-item.card-product(data-slide)
+	if item.badge
+		.card-product__badge 
+			span= item.badge
+	button(type="button").card-product__favorites.favorites-btn
+	.card-product__header
+		a(href="card.html").card-product__image
+			.card-product__switch.image-switch
+				.image-switch__item
+					.image-switch__picture 
+						img(src=`images/products/${item.img}.png`, alt=item.title)
+				.image-switch__item
+					.image-switch__picture 
+						img(src=`images/products/2.png`, alt=item.title)
+				.image-switch__item
+					.image-switch__picture 
+						img(src=`images/products/3.png`, alt=item.title)
+		.card-product__pagination.image-pagination
+	.card-product__body
+		.card-product__info
+			.card-product__article-number= item.article
+			h3.card-product__title= item.title
+			.card-product__values
+				.card-product__rating.rating
+					ul.rating__list(class=`r-${item.rating}`)
+						li.rating__item
+						li.rating__item
+						li.rating__item
+						li.rating__item
+						li.rating__item
+					.rating__value 4.7
+				.card-product__status= item.status 
+			.card-product__notice= item.notice
+			.card-product__description= item.descr
+		.card-product__footer
+			.card-product__prices
+				span.card-product__sale= item.sale
+				span.card-product__old-price= item.old_price
+					|&nbsp;₽
+				div.card-product__price= item.price
+					|&nbsp;₽
+			button(type="button").card-product__btn.product-btn В корзину

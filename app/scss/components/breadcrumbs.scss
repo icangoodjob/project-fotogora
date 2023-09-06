@@ -1,0 +1,43 @@
+.breadcrumbs {
+	padding: 16px 0 20px;
+	@media screen and (max-width: $md) {
+		padding: 16px 0;
+	}
+	&__navigation {
+	}
+	&__list {
+		@include reset-list;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 2px 6px;
+	}
+	&__item {
+		position: relative;
+		& + & {
+			padding-left: 6px;
+			&::before {
+				content: "";
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				left: 0;
+				width: 1px;
+				height: 13px;
+				background-color: #353434;
+				@media screen and (max-width: $md) {
+					height: 11px;
+				}
+			}
+		}
+		color: #353434;
+		font-size: 12px;
+		&.active {
+			color: #cf3c35;
+		}
+	}
+	&__link {
+		color: inherit;
+		line-height: 130%;
+	}
+}

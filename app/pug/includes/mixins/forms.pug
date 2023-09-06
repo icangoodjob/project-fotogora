@@ -1,0 +1,12 @@
+mixin radiobutton(className, inputName, inputValue, status)
+	.radio(class=className)
+		label.radio__label
+			input(type="radio" name=inputName value=inputValue class="real-radio" checked=status)
+			span.custom-radio
+				| !{inputValue}
+mixin checkbox(inputName, inputValue, status)
+	.checkbox
+		label.checkbox__label
+			input(type="checkbox" name=inputName value=inputValue class="real-checkbox" checked=status)
+			span.custom-checkbox
+			| !{inputValue}
