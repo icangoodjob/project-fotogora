@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Каталог товаров</title>
+	<meta name="description" content="Описание на странице - Каталог товаров">
+	<meta name="keywords" content="Ключевые слова">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://example.com">
+	<meta property="og:title" content="Каталог товаров">
+	<meta property="og:description" content="Описание на странице - Каталог товаров">
+	<meta property="og:image" content="./images/favicons/favicon-16x16.png">
+	<meta property="twitter:title" content="Каталог товаров">
+	<meta property="twitter:description" content="description">
+	<link rel="canonical" href="https://example.com">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/6.2.5/simplebar.min.css?_v=20230906173559" rel="stylesheet">
+	<link href="styles/main.min.css?_v=20230906173559" rel="stylesheet">
+	<link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/favicons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/favicons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/favicons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/favicons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-icon-180x180.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="36x36" href="images/favicons/android-icon-36x36.png">
+	<link rel="icon" type="image/png" sizes="48x48" href="images/favicons/android-icon-48x48.png">
+	<link rel="icon" type="image/png" sizes="72x72" href="images/favicons/android-icon-72x72.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="images/favicons/android-icon-96x96.png">
+	<link rel="icon" type="image/png" sizes="144x144" href="images/favicons/android-icon-144x144.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="images/favicons/android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="images/favicons/android-chrome-512x512.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="images/favicons/favicon-96x96.png">
+	<link rel="shortcut icon" href="images/favicons/favicon.ico">
+	<link rel="manifest" href="images/favicons/manifest.json">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="apple-mobile-web-app-title" content="Название">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="format-detection" content="email=no">
+	<meta name="format-detection" content="date=no">
+</head>
+
+<body>
+	<div class="wrapper" id="wrapper">
+		<header class="header" id="header">
+			<div class="header__top top-header">
+				<div class="container">
+					<div class="top-header__body">
+						<div class="top-header__actions">
+							<div class="top-header__catalog catalog-header">
+								<button class="catalog-header__button" id="catalog-btn" data-spoller>Каталог</button>
+							</div>
+							<div class="top-header__search search-header">
+								<form class="search-header__form" action="#">
+									<input class="search-header__input" type="text" placeholder="Поиск по сайту...">
+								</form>
+							</div>
+						</div>
+						<div class="top-header__menu menu-header">
+							<nav class="menu">
+								<ul class="menu__list">
+									<li class="menu__item active">
+										<a class="menu__link" href="#">Оплата и доставка</a>
+									</li>
+									<li class="menu__item">
+										<a class="menu__link" href="#">Новости</a>
+									</li>
+									<li class="menu__item">
+										<a class="menu__link" href="#">Услуги</a>
+									</li>
+									<li class="menu__item">
+										<a class="menu__link" href="#">Контакты</a>
+									</li>
+									<li class="menu__item">
+										<a class="menu__link" href="#">Блог</a>
+									</li>
+								</ul>
+							</nav>
+							<button class="menu-header__button" type="button">
+								<span></span>
+							</button>
+							<button class="close-btn" type="button"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="menu-catalog">
+				<div class="container">
+					<div class="menu-catalog__body" id="menu-catalog">
+						<div class="menu-catalog__wrapper">
+							<div class="menu-catalog__column">
+								<ul class="menu-catalog__list">
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item active">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+								</ul>
+							</div>
+							<div class="menu-catalog__column">
+								<ul class="menu-catalog__list">
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+								</ul>
+							</div>
+							<div class="menu-catalog__column">
+								<ul class="menu-catalog__list">
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+								</ul>
+							</div>
+							<div class="menu-catalog__column">
+								<ul class="menu-catalog__list">
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+								</ul>
+							</div>
+							<div class="menu-catalog__column">
+								<ul class="menu-catalog__list">
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+								</ul>
+							</div>
+							<div class="menu-catalog__column">
+								<ul class="menu-catalog__list">
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header__main main-header">
+				<div class="container">
+					<div class="main-header__body">
+						<div class="main-header__info">
+							<a class="header__logo" href="/">
+								<picture>
+									<source srcset="images/logo-pc.svg" media="(min-width: 1200px)">
+									<source srcset="images/logo-mobile.svg" media="(min-width: 320px)">
+									<img src="images/logo-pc.svg" alt="логотип">
+								</picture>
+							</a>
+							<div class="main-header__contacts contacts-header">
+								<div class="contacts-header__item contacts-header__item_city">
+									<div class="contacts-header__option">
+										<div class="contacts-header__label">Ваш город:</div>
+										<button class="contacts-header__city" type="button">Санкт-Петербург</button>
+									</div>
+									<div class="contacts-header__inner">
+										<div class="contacts-header__phones">
+											<a class="contacts-header__phone" href="tel:+78122234630">+7 (812) 223-46-30</a>
+											<a class="contacts-header__phone" href="tel:+78122234630">+7 (812) 223-46-30</a>
+										</div>
+										<button class="contacts-header__button" type="button">Обратная связь</button>
+									</div>
+								</div>
+								<div class="contacts-header__item contacts-header__item_hours">
+									<div class="contacts-header__label">Время работы:</div>
+									<div class="contacts-header__time">пн-пт:
+										<time datetime="10:30">10:30</time>-
+										<time datetime="21:00">21:00</time> сб-вс:
+										<time datetime="10:30">10:30</time>-
+										<time datetime="21:00">21:00</time>
+									</div>
+									<div class="contacts-header__notice">1-2 января выходной</div>
+								</div>
+							</div>
+						</div>
+						<div class="main-header__actions actions-header">
+							<div class="actions-header__item">
+								<a class="actions-header__link actions-header__link_user" href="#">
+									<div class="actions-header__top">
+										<span class="actions-header__icon"></span>
+									</div>Вход
+								</a>
+							</div>
+							<div class="actions-header__item">
+								<a class="actions-header__link actions-header__link_favorites" href="#">
+									<div class="actions-header__top">
+										<span class="actions-header__icon"></span>
+										<span class="actions-header__count">58</span>
+									</div>Избранное
+								</a>
+							</div>
+							<div class="actions-header__item">
+								<a class="actions-header__link actions-header__link_cart" href="#">
+									<div class="actions-header__top">
+										<span class="actions-header__icon"></span>
+										<span class="actions-header__count">85</span>
+									</div>Корзина
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="breadcrumbs">
+			<div class="container">
+				<nav class="breadcrumbs__navigation">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item">
+							<a class="breadcrumbs__link" href="/" title="Фотогора">Фотогора</a>
+						</li>
+						<li class="breadcrumbs__item">
+							<a class="breadcrumbs__link" href="/" title="Студийный свет">Студийный свет</a>
+						</li>
+						<li class="breadcrumbs__item active">Комплекты импульсного света</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<main class="main">
+			<div class="catalog">
+				<div class="container">
+					<div class="catalog__sorting sorting-catalog">
+						<div class="radiobutton-group">
+							<div class="radio">
+								<label class="radio__label">
+									<input class="real-radio" type="radio" name="sort[]" value="Дешевле">
+									<span class="custom-radio">Дешевле</span>
+								</label>
+							</div>
+							<div class="radio">
+								<label class="radio__label">
+									<input class="real-radio" type="radio" name="sort[]" value="Дороже">
+									<span class="custom-radio">Дороже</span>
+								</label>
+							</div>
+							<div class="radio">
+								<label class="radio__label">
+									<input class="real-radio" type="radio" name="sort[]" value="Популярное">
+									<span class="custom-radio">Популярное</span>
+								</label>
+							</div>
+							<div class="radio">
+								<label class="radio__label">
+									<input class="real-radio" type="radio" name="sort[]" value="190х2100 мм">
+									<span class="custom-radio">190х2100 мм</span>
+								</label>
+							</div>
+							<div class="radio">
+								<label class="radio__label">
+									<input class="real-radio" type="radio" name="sort[]" value="150х2100 мм" checked>
+									<span class="custom-radio">150х2100 мм</span>
+								</label>
+							</div>
+						</div>
+						<div class="sorting-catalog__actions">
+							<div class="sorting-catalog__buttons">
+								<button class="sorting-catalog__btn sorting-catalog__btn_filter" type="button" id="filter-btn">Фильтры</button>
+								<button class="sorting-catalog__btn sorting-catalog__btn_sort" type="button">Сортировка</button>
+							</div>
+							<div class="sorting-catalog__views views-buttons">
+								<div class="views-button views-button_grid"></div>
+								<div class="views-button views-button_list active"></div>
+							</div>
+						</div>
+					</div>
+					<div class="catalog__wrapper">
+						<aside class="catalog__aside">
+							<div class="catalog__filter filter">
+								<form class="filter__form" action="#">
+									<div class="filter__groups">
+										<div class="filter-group">
+											<div class="filter-group__name">Цена</div>
+											<div class="filter-group__items">
+												<div class="filter-group__item">
+													от
+													<input class="filter-group__input" type="text">
+												</div>
+												<div class="filter-group__item">
+													до
+													<input class="filter-group__input" type="text">
+												</div>
+											</div>
+										</div>
+										<div class="filter-group">
+											<div class="filter-group__name">Бренд</div>
+											<div class="filter-group__checkboxes">
+												<div class="checkbox">
+													<label class="checkbox__label">
+														<input class="real-checkbox" type="checkbox" name="brand[]" value="Falcon Eyes">
+														<span class="custom-checkbox"></span>Falcon Eyes
+													</label>
+												</div>
+												<div class="checkbox">
+													<label class="checkbox__label">
+														<input class="real-checkbox" type="checkbox" name="brand[]" value="Fotokvant">
+														<span class="custom-checkbox"></span>Fotokvant
+													</label>
+												</div>
+												<div class="checkbox">
+													<label class="checkbox__label">
+														<input class="real-checkbox" type="checkbox" name="brand[]" value="FST">
+														<span class="custom-checkbox"></span>FST
+													</label>
+												</div>
+												<div class="checkbox">
+													<label class="checkbox__label">
+														<input class="real-checkbox" type="checkbox" name="brand[]" value="Fujimi">
+														<span class="custom-checkbox"></span>Fujimi
+													</label>
+												</div>
+												<div class="checkbox">
+													<label class="checkbox__label">
+														<input class="real-checkbox" type="checkbox" name="brand[]" value="Godox">
+														<span class="custom-checkbox"></span>Godox
+													</label>
+												</div>
+												<div class="checkbox">
+													<label class="checkbox__label">
+														<input class="real-checkbox" type="checkbox" name="brand[]" value="Falcon Eyes">
+														<span class="custom-checkbox"></span>Falcon Eyes
+													</label>
+												</div>
+											</div>
+											<button class="filter-group__btn" type="button">Показать все 20 брендов</button>
+										</div>
+										<div class="filter-group">
+											<div class="filter-group__name">Вид</div>
+											<div class="filter-group__checkboxes">
+												<div class="checkbox">
+													<label class="checkbox__label">
+														<input class="real-checkbox" type="checkbox" name="view[]" value="Falcon Eyes">
+														<span class="custom-checkbox"></span>Falcon Eyes
+													</label>
+												</div>
+												<div class="checkbox">
+													<label class="checkbox__label">
+														<input class="real-checkbox" type="checkbox" name="view[]" value="Fotokvant">
+														<span class="custom-checkbox"></span>Fotokvant
+													</label>
+												</div>
+												<div class="checkbox">
+													<label class="checkbox__label">
+														<input class="real-checkbox" type="checkbox" name="view[]" value="FST">
+														<span class="custom-checkbox"></span>FST
+													</label>
+												</div>
+												<div class="checkbox">
+													<label class="checkbox__label">
+														<input class="real-checkbox" type="checkbox" name="view[]" value="Fujimi">
+														<span class="custom-checkbox"></span>Fujimi
+													</label>
+												</div>
+												<div class="checkbox">
+													<label class="checkbox__label">
+														<input class="real-checkbox" type="checkbox" name="view[]" value="Godox">
+														<span class="custom-checkbox"></span>Godox
+													</label>
+												</div>
+												<div class="checkbox">
+													<label class="checkbox__label">
+														<input class="real-checkbox" type="checkbox" name="view[]" value="Falcon Eyes">
+														<span class="custom-checkbox"></span>Falcon Eyes
+													</label>
+												</div>
+											</div>
+											<button class="filter-group__btn" type="button">Показать все 20 брендов</button>
+										</div>
+										<div class="filter-group">
+											<div class="filter-group__name">Тип</div>
+											<div class="filter-group__checkboxes">
+												<div class="checkbox">
+													<label class="checkbox__label">
+														<input class="real-checkbox" type="checkbox" name="type[]" value="Falcon Eyes">
+														<span class="custom-checkbox"></span>Falcon Eyes
+													</label>
+												</div>
+												<div class="checkbox">
+													<label class="checkbox__label">
+														<input class="real-checkbox" type="checkbox" name="type[]" value="Fotokvant">
+														<span class="custom-checkbox"></span>Fotokvant
+													</label>
+												</div>
+												<div class="checkbox">
+													<label class="checkbox__label">
+														<input class="real-checkbox" type="checkbox" name="type[]" value="FST">
+														<span class="custom-checkbox"></span>FST
+													</label>
+												</div>
+												<div class="checkbox">
+													<label class="checkbox__label">
+														<input class="real-checkbox" type="checkbox" name="type[]" value="Fujimi">
+														<span class="custom-checkbox"></span>Fujimi
+													</label>
+												</div>
+												<div class="checkbox">
+													<label class="checkbox__label">
+														<input class="real-checkbox" type="checkbox" name="type[]" value="Godox">
+														<span class="custom-checkbox"></span>Godox
+													</label>
+												</div>
+												<div class="checkbox">
+													<label class="checkbox__label">
+														<input class="real-checkbox" type="checkbox" name="type[]" value="Falcon Eyes">
+														<span class="custom-checkbox"></span>Falcon Eyes
+													</label>
+												</div>
+											</div>
+											<button class="filter-group__btn" type="button">Показать все 20 брендов</button>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="catalog__articles articles">
+								<div class="heading articles__heading">
+									<h2 class="heading__title">Статьи</h2>
+								</div>
+								<div class="articles__items">
+									<article class="article">
+										<header class="article__header">
+											<h3 class="article__title">Комплект серии AXIO представляет собой готовое решение</h3>
+										</header>
+										<div class="article__content">
+											<p>Комплект серии AXIO представляет собой готовое решение для домашней или профессиональной фотостудии. В комплект входят три моноблока Raylab Axio III RX-300, мощностью 300Дж каждый, два стандартных 7-дюймовых рефлектора, три стойки Стойка Raylab LS003 2,6м с воздушной амортизацией, два прямоугольных софтбокса Raylab SPG6090 с сотами, 1 шторки с набором светофильтров для стандартного 7-дюймового рефлектора, трансмиттер радиосинхронизации и удобная прочная сумка для хранения и транспортировки.</p>
+										</div>
+										<footer class="article__footer">
+											<a class="article__btn btn-show" href="#">Читать полностью</a>
+										</footer>
+									</article>
+									<article class="article">
+										<header class="article__header">
+											<h3 class="article__title">Комплект серии AXIO представляет собой готовое решение</h3>
+										</header>
+										<div class="article__content">
+											<p>Комплект серии AXIO представляет собой готовое решение для домашней или профессиональной фотостудии. В комплект входят три моноблока Raylab Axio III RX-300, мощностью 300Дж каждый, два стандартных 7-дюймовых рефлектора, три стойки Стойка Raylab LS003 2,6м с воздушной амортизацией, два прямоугольных софтбокса Raylab SPG6090 с сотами, 1 шторки с набором светофильтров для стандартного 7-дюймового рефлектора, трансмиттер радиосинхронизации и удобная прочная сумка для хранения и транспортировки.</p>
+										</div>
+										<footer class="article__footer">
+											<a class="article__btn btn-show" href="#">Читать полностью</a>
+										</footer>
+									</article>
+									<article class="article">
+										<header class="article__header">
+											<h3 class="article__title">Комплект серии AXIO представляет собой готовое решение</h3>
+										</header>
+										<div class="article__content">
+											<p>Комплект серии AXIO представляет собой готовое решение для домашней или профессиональной фотостудии. В комплект входят три моноблока Raylab Axio III RX-300, мощностью 300Дж каждый, два стандартных 7-дюймовых рефлектора, три стойки Стойка Raylab LS003 2,6м с воздушной амортизацией, два прямоугольных софтбокса Raylab SPG6090 с сотами, 1 шторки с набором светофильтров для стандартного 7-дюймового рефлектора, трансмиттер радиосинхронизации и удобная прочная сумка для хранения и транспортировки.</p>
+										</div>
+										<footer class="article__footer">
+											<a class="article__btn btn-show" href="#">Читать полностью</a>
+										</footer>
+									</article>
+								</div>
+							</div>
+						</aside>
+						<div class="catalog__products products-catalog">
+							<div class="products-catalog__cards view-horizontal">
+								<article class="products-item card-product" data-slide>
+									<div class="card-product__badge">
+										<span>-10%</span>
+									</div>
+									<button class="card-product__favorites favorites-btn" type="button"></button>
+									<div class="card-product__header">
+										<a class="card-product__image" href="card.html">
+											<div class="card-product__switch image-switch">
+												<div class="image-switch__item">
+													<div class="image-switch__picture">
+														<picture>
+															<source srcset="images/products/1.webp" type="image/webp">
+															<img src="images/products/1.png" alt="Falcon Eyes CB-BS300 перекладина телескопическая 3 м">
+														</picture>
+													</div>
+												</div>
+												<div class="image-switch__item">
+													<div class="image-switch__picture">
+														<picture>
+															<source srcset="images/products/2.webp" type="image/webp">
+															<img src="images/products/2.png" alt="Falcon Eyes CB-BS300 перекладина телескопическая 3 м">
+														</picture>
+													</div>
+												</div>
+												<div class="image-switch__item">
+													<div class="image-switch__picture">
+														<picture>
+															<source srcset="images/products/3.webp" type="image/webp">
+															<img src="images/products/3.png" alt="Falcon Eyes CB-BS300 перекладина телескопическая 3 м">
+														</picture>
+													</div>
+												</div>
+											</div>
+										</a>
+										<div class="card-product__pagination image-pagination"></div>
+									</div>
+									<div class="card-product__body">
+										<div class="card-product__info">
+											<div class="card-product__article-number">Арт. 47589690</div>
+											<h3 class="card-product__title">Falcon Eyes CB-BS300 перекладина телескопическая 3 м</h3>
+											<div class="card-product__values">
+												<div class="card-product__rating rating">
+													<ul class="rating__list r-4">
+														<li class="rating__item"></li>
+														<li class="rating__item"></li>
+														<li class="rating__item"></li>
+														<li class="rating__item"></li>
+														<li class="rating__item"></li>
+													</ul>
+													<div class="rating__value">4.7</div>
+												</div>
+												<div class="card-product__status">В наличии</div>
+											</div>
+											<div class="card-product__notice">до конца распродажи 2 дня</div>
+											<div class="card-product__description">Fotokvant B-3W - система подъема 3 фонов. Система крепится к стене или к потолку. В начале необходимо установить специальные кронштейны (2 шт.) на расстоянии ширины тубуса бумажного фона плюс 7–10 см. Затем в специальные пазы кронштейнов установить пластмассовые крепежи-распорки (6 шт.), которые необходимо после этого установить в тубус бумажного фона.</div>
+										</div>
+										<div class="card-product__footer">
+											<div class="card-product__prices">
+												<span class="card-product__sale">-60%</span>
+												<span class="card-product__old-price">2650&nbsp;₽</span>
+												<div class="card-product__price">2650&nbsp;₽</div>
+											</div>
+											<button class="card-product__btn product-btn" type="button">В корзину</button>
+										</div>
+									</div>
+								</article>
+								<article class="products-item card-product" data-slide>
+									<button class="card-product__favorites favorites-btn" type="button"></button>
+									<div class="card-product__header">
+										<a class="card-product__image" href="card.html">
+											<div class="card-product__switch image-switch">
+												<div class="image-switch__item">
+													<div class="image-switch__picture">
+														<picture>
+															<source srcset="images/products/2.webp" type="image/webp">
+															<img src="images/products/2.png" alt="Falcon Eyes CB-BS300 перекладина телескопическая 3 м">
+														</picture>
+													</div>
+												</div>
+												<div class="image-switch__item">
+													<div class="image-switch__picture">
+														<picture>
+															<source srcset="images/products/2.webp" type="image/webp">
+															<img src="images/products/2.png" alt="Falcon Eyes CB-BS300 перекладина телескопическая 3 м">
+														</picture>
+													</div>
+												</div>
+												<div class="image-switch__item">
+													<div class="image-switch__picture">
+														<picture>
+															<source srcset="images/products/3.webp" type="image/webp">
+															<img src="images/products/3.png" alt="Falcon Eyes CB-BS300 перекладина телескопическая 3 м">
+														</picture>
+													</div>
+												</div>
+											</div>
+										</a>
+										<div class="card-product__pagination image-pagination"></div>
+									</div>
+									<div class="card-product__body">
+										<div class="card-product__info">
+											<div class="card-product__article-number">Арт. 47589690</div>
+											<h3 class="card-product__title">Falcon Eyes CB-BS300 перекладина телескопическая 3 м</h3>
+											<div class="card-product__values">
+												<div class="card-product__rating rating">
+													<ul class="rating__list r-5">
+														<li class="rating__item"></li>
+														<li class="rating__item"></li>
+														<li class="rating__item"></li>
+														<li class="rating__item"></li>
+														<li class="rating__item"></li>
+													</ul>
+													<div class="rating__value">4.7</div>
+												</div>
+												<div class="card-product__status">В наличии</div>
+											</div>
+											<div class="card-product__notice">до конца распродажи 2 дня</div>
+											<div class="card-product__description">Fotokvant B-3W - система подъема 3 фонов. Система крепится к стене или к потолку. В начале необходимо установить специальные кронштейны (2 шт.) на расстоянии ширины тубуса бумажного фона плюс 7–10 см. Затем в специальные пазы кронштейнов установить пластмассовые крепежи-распорки (6 шт.), которые необходимо после этого установить в тубус бумажного фона.</div>
+										</div>
+										<div class="card-product__footer">
+											<div class="card-product__prices">
+												<span class="card-product__sale">-60%</span>
+												<span class="card-product__old-price">2650&nbsp;₽</span>
+												<div class="card-product__price">2650&nbsp;₽</div>
+											</div>
+											<button class="card-product__btn product-btn" type="button">В корзину</button>
+										</div>
+									</div>
+								</article>
+								<article class="products-item card-product" data-slide>
+									<button class="card-product__favorites favorites-btn" type="button"></button>
+									<div class="card-product__header">
+										<a class="card-product__image" href="card.html">
+											<div class="card-product__switch image-switch">
+												<div class="image-switch__item">
+													<div class="image-switch__picture">
+														<picture>
+															<source srcset="images/products/3.webp" type="image/webp">
+															<img src="images/products/3.png" alt="Falcon Eyes CB-BS300 перекладина телескопическая 3 м">
+														</picture>
+													</div>
+												</div>
+												<div class="image-switch__item">
+													<div class="image-switch__picture">
+														<picture>
+															<source srcset="images/products/2.webp" type="image/webp">
+															<img src="images/products/2.png" alt="Falcon Eyes CB-BS300 перекладина телескопическая 3 м">
+														</picture>
+													</div>
+												</div>
+												<div class="image-switch__item">
+													<div class="image-switch__picture">
+														<picture>
+															<source srcset="images/products/3.webp" type="image/webp">
+															<img src="images/products/3.png" alt="Falcon Eyes CB-BS300 перекладина телескопическая 3 м">
+														</picture>
+													</div>
+												</div>
+											</div>
+										</a>
+										<div class="card-product__pagination image-pagination"></div>
+									</div>
+									<div class="card-product__body">
+										<div class="card-product__info">
+											<div class="card-product__article-number">Арт. 47589690</div>
+											<h3 class="card-product__title">Falcon Eyes CB-BS300 перекладина телескопическая 3 м</h3>
+											<div class="card-product__values">
+												<div class="card-product__rating rating">
+													<ul class="rating__list r-4">
+														<li class="rating__item"></li>
+														<li class="rating__item"></li>
+														<li class="rating__item"></li>
+														<li class="rating__item"></li>
+														<li class="rating__item"></li>
+													</ul>
+													<div class="rating__value">4.7</div>
+												</div>
+												<div class="card-product__status">В наличии</div>
+											</div>
+											<div class="card-product__notice">до конца распродажи 2 дня</div>
+											<div class="card-product__description">Fotokvant B-3W - система подъема 3 фонов. Система крепится к стене или к потолку. В начале необходимо установить специальные кронштейны (2 шт.) на расстоянии ширины тубуса бумажного фона плюс 7–10 см. Затем в специальные пазы кронштейнов установить пластмассовые крепежи-распорки (6 шт.), которые необходимо после этого установить в тубус бумажного фона.</div>
+										</div>
+										<div class="card-product__footer">
+											<div class="card-product__prices">
+												<span class="card-product__sale">-60%</span>
+												<span class="card-product__old-price">2650&nbsp;₽</span>
+												<div class="card-product__price">2650&nbsp;₽</div>
+											</div>
+											<button class="card-product__btn product-btn" type="button">В корзину</button>
+										</div>
+									</div>
+								</article>
+								<article class="products-item card-product" data-slide>
+									<button class="card-product__favorites favorites-btn" type="button"></button>
+									<div class="card-product__header">
+										<a class="card-product__image" href="card.html">
+											<div class="card-product__switch image-switch">
+												<div class="image-switch__item">
+													<div class="image-switch__picture">
+														<picture>
+															<source srcset="images/products/4.webp" type="image/webp">
+															<img src="images/products/4.png" alt="Falcon Eyes CB-BS300 перекладина телескопическая 3 м">
+														</picture>
+													</div>
+												</div>
+												<div class="image-switch__item">
+													<div class="image-switch__picture">
+														<picture>
+															<source srcset="images/products/2.webp" type="image/webp">
+															<img src="images/products/2.png" alt="Falcon Eyes CB-BS300 перекладина телескопическая 3 м">
+														</picture>
+													</div>
+												</div>
+												<div class="image-switch__item">
+													<div class="image-switch__picture">
+														<picture>
+															<source srcset="images/products/3.webp" type="image/webp">
+															<img src="images/products/3.png" alt="Falcon Eyes CB-BS300 перекладина телескопическая 3 м">
+														</picture>
+													</div>
+												</div>
+											</div>
+										</a>
+										<div class="card-product__pagination image-pagination"></div>
+									</div>
+									<div class="card-product__body">
+										<div class="card-product__info">
+											<div class="card-product__article-number">Арт. 47589690</div>
+											<h3 class="card-product__title">Falcon Eyes CB-BS300 перекладина телескопическая 3 м</h3>
+											<div class="card-product__values">
+												<div class="card-product__rating rating">
+													<ul class="rating__list r-4">
+														<li class="rating__item"></li>
+														<li class="rating__item"></li>
+														<li class="rating__item"></li>
+														<li class="rating__item"></li>
+														<li class="rating__item"></li>
+													</ul>
+													<div class="rating__value">4.7</div>
+												</div>
+												<div class="card-product__status">В наличии</div>
+											</div>
+											<div class="card-product__notice">до конца распродажи 2 дня</div>
+											<div class="card-product__description">Fotokvant B-3W - система подъема 3 фонов. Система крепится к стене или к потолку. В начале необходимо установить специальные кронштейны (2 шт.) на расстоянии ширины тубуса бумажного фона плюс 7–10 см. Затем в специальные пазы кронштейнов установить пластмассовые крепежи-распорки (6 шт.), которые необходимо после этого установить в тубус бумажного фона.</div>
+										</div>
+										<div class="card-product__footer">
+											<div class="card-product__prices">
+												<span class="card-product__sale">-60%</span>
+												<span class="card-product__old-price">2650&nbsp;₽</span>
+												<div class="card-product__price">2650&nbsp;₽</div>
+											</div>
+											<button class="card-product__btn product-btn" type="button">В корзину</button>
+										</div>
+									</div>
+								</article>
+								<article class="products-item card-product" data-slide>
+									<button class="card-product__favorites favorites-btn" type="button"></button>
+									<div class="card-product__header">
+										<a class="card-product__image" href="card.html">
+											<div class="card-product__switch image-switch">
+												<div class="image-switch__item">
+													<div class="image-switch__picture">
+														<picture>
+															<source srcset="images/products/1.webp" type="image/webp">
+															<img src="images/products/1.png" alt="Falcon Eyes CB-BS300 перекладина телескопическая 3 м">
+														</picture>
+													</div>
+												</div>
+												<div class="image-switch__item">
+													<div class="image-switch__picture">
+														<picture>
+															<source srcset="images/products/2.webp" type="image/webp">
+															<img src="images/products/2.png" alt="Falcon Eyes CB-BS300 перекладина телескопическая 3 м">
+														</picture>
+													</div>
+												</div>
+												<div class="image-switch__item">
+													<div class="image-switch__picture">
+														<picture>
+															<source srcset="images/products/3.webp" type="image/webp">
+															<img src="images/products/3.png" alt="Falcon Eyes CB-BS300 перекладина телескопическая 3 м">
+														</picture>
+													</div>
+												</div>
+											</div>
+										</a>
+										<div class="card-product__pagination image-pagination"></div>
+									</div>
+									<div class="card-product__body">
+										<div class="card-product__info">
+											<div class="card-product__article-number">Арт. 47589690</div>
+											<h3 class="card-product__title">Falcon Eyes CB-BS300 перекладина телескопическая 3 м</h3>
+											<div class="card-product__values">
+												<div class="card-product__rating rating">
+													<ul class="rating__list r-4">
+														<li class="rating__item"></li>
+														<li class="rating__item"></li>
+														<li class="rating__item"></li>
+														<li class="rating__item"></li>
+														<li class="rating__item"></li>
+													</ul>
+													<div class="rating__value">4.7</div>
+												</div>
+												<div class="card-product__status">В наличии</div>
+											</div>
+											<div class="card-product__notice">до конца распродажи 2 дня</div>
+											<div class="card-product__description">Fotokvant B-3W - система подъема 3 фонов. Система крепится к стене или к потолку. В начале необходимо установить специальные кронштейны (2 шт.) на расстоянии ширины тубуса бумажного фона плюс 7–10 см. Затем в специальные пазы кронштейнов установить пластмассовые крепежи-распорки (6 шт.), которые необходимо после этого установить в тубус бумажного фона.</div>
+										</div>
+										<div class="card-product__footer">
+											<div class="card-product__prices">
+												<span class="card-product__sale">-60%</span>
+												<span class="card-product__old-price">2650&nbsp;₽</span>
+												<div class="card-product__price">2650&nbsp;₽</div>
+											</div>
+											<button class="card-product__btn product-btn" type="button">В корзину</button>
+										</div>
+									</div>
+								</article>
+								<article class="products-item card-product" data-slide>
+									<button class="card-product__favorites favorites-btn" type="button"></button>
+									<div class="card-product__header">
+										<a class="card-product__image" href="card.html">
+											<div class="card-product__switch image-switch">
+												<div class="image-switch__item">
+													<div class="image-switch__picture">
+														<picture>
+															<source srcset="images/products/2.webp" type="image/webp">
+															<img src="images/products/2.png" alt="Falcon Eyes CB-BS300 перекладина телескопическая 3 м">
+														</picture>
+													</div>
+												</div>
+												<div class="image-switch__item">
+													<div class="image-switch__picture">
+														<picture>
+															<source srcset="images/products/2.webp" type="image/webp">
+															<img src="images/products/2.png" alt="Falcon Eyes CB-BS300 перекладина телескопическая 3 м">
+														</picture>
+													</div>
+												</div>
+												<div class="image-switch__item">
+													<div class="image-switch__picture">
+														<picture>
+															<source srcset="images/products/3.webp" type="image/webp">
+															<img src="images/products/3.png" alt="Falcon Eyes CB-BS300 перекладина телескопическая 3 м">
+														</picture>
+													</div>
+												</div>
+											</div>
+										</a>
+										<div class="card-product__pagination image-pagination"></div>
+									</div>
+									<div class="card-product__body">
+										<div class="card-product__info">
+											<div class="card-product__article-number">Арт. 47589690</div>
+											<h3 class="card-product__title">Falcon Eyes CB-BS300 перекладина телескопическая 3 м</h3>
+											<div class="card-product__values">
+												<div class="card-product__rating rating">
+													<ul class="rating__list r-5">
+														<li class="rating__item"></li>
+														<li class="rating__item"></li>
+														<li class="rating__item"></li>
+														<li class="rating__item"></li>
+														<li class="rating__item"></li>
+													</ul>
+													<div class="rating__value">4.7</div>
+												</div>
+												<div class="card-product__status">В наличии</div>
+											</div>
+											<div class="card-product__notice">до конца распродажи 2 дня</div>
+											<div class="card-product__description">Fotokvant B-3W - система подъема 3 фонов. Система крепится к стене или к потолку. В начале необходимо установить специальные кронштейны (2 шт.) на расстоянии ширины тубуса бумажного фона плюс 7–10 см. Затем в специальные пазы кронштейнов установить пластмассовые крепежи-распорки (6 шт.), которые необходимо после этого установить в тубус бумажного фона.</div>
+										</div>
+										<div class="card-product__footer">
+											<div class="card-product__prices">
+												<span class="card-product__sale">-60%</span>
+												<span class="card-product__old-price">2650&nbsp;₽</span>
+												<div class="card-product__price">2650&nbsp;₽</div>
+											</div>
+											<button class="card-product__btn product-btn" type="button">В корзину</button>
+										</div>
+									</div>
+								</article>
+								<article class="products-item card-product" data-slide>
+									<button class="card-product__favorites favorites-btn" type="button"></button>
+									<div class="card-product__header">
+										<a class="card-product__image" href="card.html">
+											<div class="card-product__switch image-switch">
+												<div class="image-switch__item">
+													<div class="image-switch__picture">
+														<picture>
+															<source srcset="images/products/3.webp" type="image/webp">
+															<img src="images/products/3.png" alt="Falcon Eyes CB-BS300 перекладина телескопическая 3 м">
+														</picture>
+													</div>
+												</div>
+												<div class="image-switch__item">
+													<div class="image-switch__picture">
+														<picture>
+															<source srcset="images/products/2.webp" type="image/webp">
+															<img src="images/products/2.png" alt="Falcon Eyes CB-BS300 перекладина телескопическая 3 м">
+														</picture>
+													</div>
+												</div>
+												<div class="image-switch__item">
+													<div class="image-switch__picture">
+														<picture>
+															<source srcset="images/products/3.webp" type="image/webp">
+															<img src="images/products/3.png" alt="Falcon Eyes CB-BS300 перекладина телескопическая 3 м">
+														</picture>
+													</div>
+												</div>
+											</div>
+										</a>
+										<div class="card-product__pagination image-pagination"></div>
+									</div>
+									<div class="card-product__body">
+										<div class="card-product__info">
+											<div class="card-product__article-number">Арт. 47589690</div>
+											<h3 class="card-product__title">Falcon Eyes CB-BS300 перекладина телескопическая 3 м</h3>
+											<div class="card-product__values">
+												<div class="card-product__rating rating">
+													<ul class="rating__list r-4">
+														<li class="rating__item"></li>
+														<li class="rating__item"></li>
+														<li class="rating__item"></li>
+														<li class="rating__item"></li>
+														<li class="rating__item"></li>
+													</ul>
+													<div class="rating__value">4.7</div>
+												</div>
+												<div class="card-product__status">В наличии</div>
+											</div>
+											<div class="card-product__notice">до конца распродажи 2 дня</div>
+											<div class="card-product__description">Fotokvant B-3W - система подъема 3 фонов. Система крепится к стене или к потолку. В начале необходимо установить специальные кронштейны (2 шт.) на расстоянии ширины тубуса бумажного фона плюс 7–10 см. Затем в специальные пазы кронштейнов установить пластмассовые крепежи-распорки (6 шт.), которые необходимо после этого установить в тубус бумажного фона.</div>
+										</div>
+										<div class="card-product__footer">
+											<div class="card-product__prices">
+												<span class="card-product__sale">-60%</span>
+												<span class="card-product__old-price">2650&nbsp;₽</span>
+												<div class="card-product__price">2650&nbsp;₽</div>
+											</div>
+											<button class="card-product__btn product-btn" type="button">В корзину</button>
+										</div>
+									</div>
+								</article>
+							</div>
+							<div class="products-catalog__bottom catalog-bottom">
+								<div class="pagination">
+									<ul class="pagination__list">
+										<li class="pagination__item">
+											<a class="pagination__link pagination__link_arrow pagination-arrow-prev" href="#"></a>
+										</li>
+										<li class="pagination__item">
+											<a class="pagination__link" href="#">1</a>
+										</li>
+										<li class="pagination__item active">
+											<a class="pagination__link" href="#">2</a>
+										</li>
+										<li class="pagination__item">
+											<a class="pagination__link" href="#">3</a>
+										</li>
+										<li class="pagination__item">
+											<a class="pagination__link" href="#">4</a>
+										</li>
+										<li class="pagination__item">
+											<a class="pagination__link" href="#">5</a>
+										</li>
+										<li class="pagination__item">
+											<a class="pagination__link pagination__link_arrow pagination-arrow-next" href="#"></a>
+										</li>
+									</ul>
+								</div>
+								<div class="catalog-bottom__btn">
+									<a class="btn-show" href="#">Посмотреть архивные товары</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="catalog__content content-catalog">
+						<div class="heading content-catalog__heading">
+							<div class="heading__title">Комплекты импульсного света</div>
+						</div>
+						<div class="content-catalog__description">
+							<p>Система установки фона предназначена для установки и легкой замены студийного фона. Студийный фон – необходимый элемент студии и зачастую его быстрая смена экономит не только время, но и деньги.</p>
+							<p>
+								Системы установки фонов из магазина Фотогора упрощают работу фотографа в студии и на выезде. Они позволяют с легкостью менять задники, ускорять подготовку к съемке. Мы отбираем для каталога прочные, надежные конструкции, на которых можно закрепить тканевый, бумажный, пластиковый или другой фон, выпускаемый в рулонах или полотнах.</p>
+							<p>Система установки фона предназначена для установки и легкой замены студийного фона. Студийный фон – необходимый элемент студии и зачастую его быстрая смена экономит не только время, но и деньги.</p>
+							<p>Системы установки фонов из магазина Фотогора упрощают работу фотографа в студии и на выезде. Они позволяют с легкостью менять задники, ускорять подготовку к съемке. Мы отбираем для каталога прочные, надежные конструкции, на которых можно закрепить тканевый, бумажный, пластиковый или другой фон, выпускаемый в рулонах или полотнах.</p>
+						</div>
+						<div class="content-catalog__image-wrapper">
+							<div class="content-catalog__image">
+								<picture>
+									<source srcset="images/catalog/content-img.webp" type="image/webp">
+									<img src="images/catalog/content-img.jpg" alt="изображение в контенте">
+								</picture>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="categories">
+				<div class="container">
+					<div class="heading categories__heading">
+						<div class="heading__title">Другие категории</div>
+					</div>
+					<div class="categories__slider" data-slider="categories">
+						<div class="categories__body swiper">
+							<div class="categories__wrapper swiper-wrapper">
+								<div class="swiper-slide" data-slide>
+									<a class="item-partion" href="#">
+										<div class="item-partion__image">
+											<picture>
+												<source srcset="images/partions/img.webp" type="image/webp">
+												<img src="images/partions/img.png" alt="заголовок разделы">
+											</picture>
+										</div>
+										<div class="item-partion__body">
+											<div class="item-partion__title">Студийный свет</div>
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide" data-slide>
+									<a class="item-partion" href="#">
+										<div class="item-partion__image">
+											<picture>
+												<source srcset="images/partions/img.webp" type="image/webp">
+												<img src="images/partions/img.png" alt="заголовок разделы">
+											</picture>
+										</div>
+										<div class="item-partion__body">
+											<div class="item-partion__title">Системы крепления и монтажа</div>
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide" data-slide>
+									<a class="item-partion" href="#">
+										<div class="item-partion__image">
+											<picture>
+												<source srcset="images/partions/img.webp" type="image/webp">
+												<img src="images/partions/img.png" alt="заголовок разделы">
+											</picture>
+										</div>
+										<div class="item-partion__body">
+											<div class="item-partion__title">Штативы и моноподы</div>
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide" data-slide>
+									<a class="item-partion" href="#">
+										<div class="item-partion__image">
+											<picture>
+												<source srcset="images/partions/img.webp" type="image/webp">
+												<img src="images/partions/img.png" alt="заголовок разделы">
+											</picture>
+										</div>
+										<div class="item-partion__body">
+											<div class="item-partion__title">Сетевые модификаторы</div>
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide" data-slide>
+									<a class="item-partion" href="#">
+										<div class="item-partion__image">
+											<picture>
+												<source srcset="images/partions/img.webp" type="image/webp">
+												<img src="images/partions/img.png" alt="заголовок разделы">
+											</picture>
+										</div>
+										<div class="item-partion__body">
+											<div class="item-partion__title">Фоны</div>
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide" data-slide>
+									<a class="item-partion" href="#">
+										<div class="item-partion__image">
+											<picture>
+												<source srcset="images/partions/img.webp" type="image/webp">
+												<img src="images/partions/img.png" alt="заголовок разделы">
+											</picture>
+										</div>
+										<div class="item-partion__body">
+											<div class="item-partion__title">Столы и фотобоксы</div>
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide" data-slide>
+									<a class="item-partion" href="#">
+										<div class="item-partion__image">
+											<picture>
+												<source srcset="images/partions/img.webp" type="image/webp">
+												<img src="images/partions/img.png" alt="заголовок разделы">
+											</picture>
+										</div>
+										<div class="item-partion__body">
+											<div class="item-partion__title">Студийный свет</div>
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide" data-slide>
+									<a class="item-partion" href="#">
+										<div class="item-partion__image">
+											<picture>
+												<source srcset="images/partions/img.webp" type="image/webp">
+												<img src="images/partions/img.png" alt="заголовок разделы">
+											</picture>
+										</div>
+										<div class="item-partion__body">
+											<div class="item-partion__title">Системы крепления и монтажа</div>
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide" data-slide>
+									<a class="item-partion" href="#">
+										<div class="item-partion__image">
+											<picture>
+												<source srcset="images/partions/img.webp" type="image/webp">
+												<img src="images/partions/img.png" alt="заголовок разделы">
+											</picture>
+										</div>
+										<div class="item-partion__body">
+											<div class="item-partion__title">Штативы и моноподы</div>
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide" data-slide>
+									<a class="item-partion" href="#">
+										<div class="item-partion__image">
+											<picture>
+												<source srcset="images/partions/img.webp" type="image/webp">
+												<img src="images/partions/img.png" alt="заголовок разделы">
+											</picture>
+										</div>
+										<div class="item-partion__body">
+											<div class="item-partion__title">Сетевые модификаторы</div>
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide" data-slide>
+									<a class="item-partion" href="#">
+										<div class="item-partion__image">
+											<picture>
+												<source srcset="images/partions/img.webp" type="image/webp">
+												<img src="images/partions/img.png" alt="заголовок разделы">
+											</picture>
+										</div>
+										<div class="item-partion__body">
+											<div class="item-partion__title">Фоны</div>
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide" data-slide>
+									<a class="item-partion" href="#">
+										<div class="item-partion__image">
+											<picture>
+												<source srcset="images/partions/img.webp" type="image/webp">
+												<img src="images/partions/img.png" alt="заголовок разделы">
+											</picture>
+										</div>
+										<div class="item-partion__body">
+											<div class="item-partion__title">Столы и фотобоксы</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="categories__controls slider-controls">
+								<button class="slider-button slider-button-prev" type="button"></button>
+								<button class="slider-button slider-button-next" type="button"></button>
+							</div>
+						</div>
+						<div class="categories__pagination slider-pagination"> </div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__body">
+					<div class="footer__column">
+						<a class="footer__logo" href="/">
+							<picture>
+								<source srcset="images/footer-logo.svg" media="(min-width: 767.98px)">
+								<source srcset="images/footer-logo-mobile.svg" media="(min-width: 320px)">
+								<img src="images/footer-logo.svg" alt="логотип фотогора">
+							</picture>
+						</a>
+						<div class="footer__links">
+							<a class="footer__link footer__link_subscribe" href="/">Подписка на новости</a>
+							<a class="footer__link footer__link_phone" href="tel:74953631098">+7(495) 363-10-98</a>
+							<a class="footer__link footer__link_email" href="mailto:333@photogora.ru">333@photogora.ru</a>
+						</div>
+					</div>
+					<div class="footer__column">
+						<nav class="footer__menu menu-footer">
+							<ul class="menu-footer__list">
+								<li class="menu-footer__item">
+									<a class="menu-footer__link" href="#">Каталог</a>
+								</li>
+								<li class="menu-footer__item">
+									<a class="menu-footer__link" href="#">Оплата и доставка</a>
+								</li>
+								<li class="menu-footer__item">
+									<a class="menu-footer__link" href="#">Новости</a>
+								</li>
+								<li class="menu-footer__item">
+									<a class="menu-footer__link" href="#">Услуги</a>
+								</li>
+								<li class="menu-footer__item">
+									<a class="menu-footer__link" href="#">Контакты</a>
+								</li>
+								<li class="menu-footer__item">
+									<a class="menu-footer__link" href="#">Блог</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="footer__column">
+						<div class="footer__left">
+							<div class="footer__social social-footer">
+								<ul class="social-footer__list">
+									<li class="social-footer__item">
+										<a class="social-footer__link social-footer__link_youtube" href="#"></a>
+									</li>
+									<li class="social-footer__item">
+										<a class="social-footer__link social-footer__link_email" href="#"></a>
+									</li>
+									<li class="social-footer__item">
+										<a class="social-footer__link social-footer__link_vk" href="#"></a>
+									</li>
+									<li class="social-footer__item">
+										<a class="social-footer__link social-footer__link_twitter" href="#"></a>
+									</li>
+									<li class="social-footer__item">
+										<a class="social-footer__link social-footer__link_telegram" href="#"></a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer__copy">© 2013-2023 Фотогора. Все права защищены.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="scripts/main.min.js?_v=20230906173559" defer></script>
+</body>
+
+</html>
