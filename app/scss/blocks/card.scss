@@ -113,6 +113,7 @@
 		align-items: center;
 		gap: 8px;
 		width: 100%;
+		transition: color 0.15s ease 0s;
 		@media screen and (max-width: $lg) {
 			justify-content: center;
 		}
@@ -126,6 +127,11 @@
 			mask-position: center;
 			width: 24px;
 			height: 24px;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: #cf3c35;
+			}
 		}
 	}
 	&__having {
@@ -147,10 +153,16 @@
 		min-height: 35px;
 		background-color: transparent;
 		font-family: "Inter", sans-serif;
+		transition:
+			background-color 0.15s ease 0s,
+			color 0.15s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #659d5c;
+				color: $whiteColor;
+			}
+		}
 	}
-	&__btn {
-	}
-
 	&__list {
 	}
 	& .play-button {

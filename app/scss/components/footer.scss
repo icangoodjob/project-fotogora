@@ -162,6 +162,9 @@
 		align-items: center;
 		background: rgba(#dadada, 0.2);
 		transition: background 0.2s ease 0s;
+		position: relative;
+		z-index: 2;
+		overflow: hidden;
 		&::before {
 			content: "";
 			display: block;
@@ -172,12 +175,30 @@
 			mask-position: center;
 			mask-size: 18px 18px;
 		}
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			background: #ff6760;
+			background: linear-gradient(180deg, #ff6760 0%, #cf3c35 100%);
+			opacity: 0;
+			transform: scale(0);
+			transition:
+				opacity 0.2s ease 0s,
+				transform 0.2s ease 0s;
+			z-index: -1;
+		}
 		@media (any-hover: hover) {
-			&:hover {
-				background: linear-gradient(180deg, #ff6760 0%, #cf3c35 100%);
-			}
+			&:hover,
 			&:active {
-				background: linear-gradient(180deg, #ff6760 0%, #cf3c35 100%);
+				&::after {
+					opacity: 1;
+					transform: scale(1);
+				}
 			}
 		}
 		&_youtube {

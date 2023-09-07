@@ -176,6 +176,7 @@ if (categoriesSlider) {
 		spaceBetween: 12,
 		slidesPerView: 6,
 		slidesPerGroup: 3,
+		speed: 800,
 		pagination: {
 			el: '.categories__pagination.slider-pagination',
 			type: 'bullets',
@@ -201,7 +202,7 @@ if (categoriesSlider) {
 			1200: {
 				slidesPerView: 6,
 				spaceBetween: 30,
-				slidesPerGroup: 6,
+				slidesPerGroup: 3,
 				centeredSlides: false,
 			}
 		}

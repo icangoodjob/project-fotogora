@@ -67,3 +67,12 @@
 		mask-image: url("../images/icons/arrow-right.svg");
 	}
 }
+.pagination-arrow-prev,
+.pagination-arrow-next {
+	transition: background 0.15s linear 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			background: rgba($mainColor, 0.8);
+		}
+	}
+}

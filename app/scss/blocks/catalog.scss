@@ -134,6 +134,11 @@
 		&::before {
 			background-color: #4b4b4b;
 		}
+		&:hover {
+			&::before {
+				background-color: #4b4b4b;
+			}
+		}
 	}
 	&::before {
 		content: "";
@@ -144,6 +149,7 @@
 		mask-size: 32px 32px;
 		mask-repeat: no-repeat;
 		mask-position: center;
+		transition: background 0.2s ease 0s;
 		@media screen and (max-width: $md) {
 			width: 24px;
 			height: 24px;
@@ -163,6 +169,13 @@
 			mask-image: url("../images/icons/btn-list.svg");
 			@media screen and (max-width: $md) {
 				mask-image: url("../images/icons/btn-list-mobile.svg");
+			}
+		}
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			&::before {
+				background-color: rgba(#4b4b4b, 0.5);
 			}
 		}
 	}

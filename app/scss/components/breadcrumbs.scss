@@ -39,5 +39,11 @@
 	&__link {
 		color: inherit;
 		line-height: 130%;
+		transition: color 0.15s linear 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #cf3c35;
+			}
+		}
 	}
 }
