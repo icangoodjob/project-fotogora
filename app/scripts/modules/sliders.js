@@ -280,13 +280,17 @@ const cardThumbsSlider = document.querySelector('.thumbs-slider-wrapper');
 let cardNavSwiper;
 if (cardMainSlider) {
 	cardNavSwiper = new Swiper(cardThumbsSlider, {
-		modules: [Thumbs],
+		modules: [Thumbs, Navigation],
 		direction: 'vertical',
 		slidesPerView: 5,
 		spaceBetween: 10,
 		slideClass: "thumbs-slider-item",
 		wrapperClass: "thumbs-slider-body",
 		speed: 600,
+		navigation: {
+			nextEl: ".thumbs-slider__controls .slider-button-next",
+			prevEl: ".thumbs-slider__controls .slider-button-prev",
+		},
 	})
 	let cardMainSwiper = new Swiper(cardMainSlider, {
 		modules: [Thumbs, Navigation, Pagination],

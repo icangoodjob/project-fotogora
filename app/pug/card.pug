@@ -19,6 +19,9 @@ block content
 									.thumbs-slider-item.swiper-slide
 										.thumbs-slider-image 
 											img(src=`images/main-card/product-${item.img}.png`, alt="маленькое изображение товара")
+						.thumbs-slider__controls.slider-controls
+							button(type="button").slider-button.slider-button-prev
+							button(type="button").slider-button.slider-button-next
 					.main-slider-wrapper.swiper
 						.main-slider-body.swiper-wrapper
 							each item, index in mainCard.slider

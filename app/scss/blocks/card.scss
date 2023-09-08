@@ -201,6 +201,7 @@
 	}
 }
 .thumbs-slider {
+	position: relative;
 	@media screen and (max-width: $md) {
 		display: none;
 	}
