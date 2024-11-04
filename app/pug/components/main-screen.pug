@@ -1,0 +1,12 @@
+section.main-screen
+    .container 
+        .main-screen__content
+            .main-screen__image 
+                picture
+                    source(srcset=`images/main-screen/bg.jpg` media="(min-width: 576px)")
+                    source(srcset=`images/main-screen/bg-mob.jpg` media="(min-width: 320px)")
+                    img(src="images/main-screen/bg.jpg", alt="Верхний баннер")
+            .main-screen__info
+                h2.main-screen__title Хорошие фотографии живут&nbsp;в&nbsp;Санкт&nbsp;-&nbsp;Петербурге.
+                p.main-screen__subtitle Просто добавьте свет!
+            a(href="/").main-screen__btn.btn Узнать больше

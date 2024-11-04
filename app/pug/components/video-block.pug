@@ -1,0 +1,21 @@
+div.video-block
+    .container
+        .video-block__slider(data-slider="video")
+            .video-block__wrapper.swiper
+                .video-block__body.swiper-wrapper
+                    each item, index in videoBlock
+                        .video-block__item.item-video.swiper-slide(data-slide)
+                            .item-video__image
+                                a(href=`files/fotogora.mp4` data-fslightbox="gallery")
+                                    video(class="video-player" poster=`images/video-block/${item.img}.png`)
+                                        source(src="files/fotogora.mp4" type="video/mp4")
+                            button(type="button").item-video__play.play-button
+                            .item-video__content 
+                                .item-video__description= item.text
+                                .item-video__info.info-video
+                                    .info-video__item.info-video__message= item.message
+                                    .info-video__item.info-video__views= item.views
+                .video-block__controls.slider-controls
+                    button(type="button").slider-button.slider-button-prev
+                    button(type="button").slider-button.slider-button-next
+            .video-block__pagination.slider-pagination

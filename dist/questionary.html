@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Анкета клиента</title>
+	<meta name="description" content="Описание на странице - Анкета клиента">
+	<meta name="keywords" content="Ключевые слова">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://example.com">
+	<meta property="og:title" content="Анкета клиента">
+	<meta property="og:description" content="Описание на странице - Анкета клиента">
+	<meta property="og:image" content="./images/favicons/favicon-16x16.png">
+	<meta property="twitter:title" content="Анкета клиента">
+	<meta property="twitter:description" content="description">
+	<link rel="canonical" href="https://example.com">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/6.2.5/simplebar.min.css?_v=20241104140550" rel="stylesheet">
+	<link href="styles/main.min.css?_v=20241104140550" rel="stylesheet">
+	<link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/favicons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/favicons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/favicons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/favicons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-icon-180x180.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="36x36" href="images/favicons/android-icon-36x36.png">
+	<link rel="icon" type="image/png" sizes="48x48" href="images/favicons/android-icon-48x48.png">
+	<link rel="icon" type="image/png" sizes="72x72" href="images/favicons/android-icon-72x72.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="images/favicons/android-icon-96x96.png">
+	<link rel="icon" type="image/png" sizes="144x144" href="images/favicons/android-icon-144x144.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="images/favicons/android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="images/favicons/android-chrome-512x512.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="images/favicons/favicon-96x96.png">
+	<link rel="shortcut icon" href="images/favicons/favicon.ico">
+	<link rel="manifest" href="images/favicons/manifest.json">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="apple-mobile-web-app-title" content="Название">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="format-detection" content="email=no">
+	<meta name="format-detection" content="date=no">
+</head>
+
+<body>
+	<div class="wrapper" id="wrapper">
+		<header class="header" id="header">
+			<div class="header__top top-header">
+				<div class="container">
+					<div class="top-header__body">
+						<div class="top-header__actions">
+							<div class="top-header__catalog catalog-header">
+								<button class="catalog-header__button" id="catalog-btn" data-spoller>Каталог</button>
+							</div>
+							<div class="top-header__search search-header">
+								<form class="search-header__form" action="#">
+									<input class="search-header__input" type="text" placeholder="Поиск по сайту...">
+								</form>
+							</div>
+						</div>
+						<div class="top-header__menu menu-header">
+							<nav class="menu">
+								<ul class="menu__list">
+									<li class="menu__item active">
+										<a class="menu__link" href="#">Оплата и доставка</a>
+									</li>
+									<li class="menu__item">
+										<a class="menu__link" href="#">Новости</a>
+									</li>
+									<li class="menu__item">
+										<a class="menu__link" href="#">Услуги</a>
+									</li>
+									<li class="menu__item">
+										<a class="menu__link" href="#">Контакты</a>
+									</li>
+									<li class="menu__item">
+										<a class="menu__link" href="#">Блог</a>
+									</li>
+								</ul>
+							</nav>
+							<button class="menu-header__button" type="button">
+								<span></span>
+							</button>
+							<button class="close-btn" type="button"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="menu-catalog">
+				<div class="container">
+					<div class="menu-catalog__body" id="menu-catalog">
+						<div class="menu-catalog__wrapper">
+							<div class="menu-catalog__column">
+								<ul class="menu-catalog__list">
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item active">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+								</ul>
+							</div>
+							<div class="menu-catalog__column">
+								<ul class="menu-catalog__list">
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+								</ul>
+							</div>
+							<div class="menu-catalog__column">
+								<ul class="menu-catalog__list">
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+								</ul>
+							</div>
+							<div class="menu-catalog__column">
+								<ul class="menu-catalog__list">
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+								</ul>
+							</div>
+							<div class="menu-catalog__column">
+								<ul class="menu-catalog__list">
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+								</ul>
+							</div>
+							<div class="menu-catalog__column">
+								<ul class="menu-catalog__list">
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+									<li class="menu-catalog__item">
+										<a class="menu-catalog__link" href="catalog.html">Заголовок раздела в две строки</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header__main main-header">
+				<div class="container">
+					<div class="main-header__body">
+						<div class="main-header__info">
+							<a class="header__logo" href="/">
+								<picture>
+									<source srcset="images/logo-pc.svg" media="(min-width: 1200px)">
+									<source srcset="images/logo-mobile.svg" media="(min-width: 320px)">
+									<img src="images/logo-pc.svg" alt="логотип">
+								</picture>
+							</a>
+							<div class="main-header__contacts contacts-header">
+								<div class="contacts-header__item contacts-header__item_city">
+									<div class="contacts-header__option">
+										<div class="contacts-header__label">Ваш город:</div>
+										<button class="contacts-header__city" type="button">Санкт-Петербург</button>
+									</div>
+									<div class="contacts-header__inner">
+										<div class="contacts-header__phones">
+											<a class="contacts-header__phone" href="tel:+78122234630">+7 (812) 223-46-30</a>
+											<a class="contacts-header__phone" href="tel:+78122234630">+7 (812) 223-46-30</a>
+										</div>
+										<button class="contacts-header__button" type="button">Обратная связь</button>
+									</div>
+								</div>
+								<div class="contacts-header__item contacts-header__item_hours">
+									<div class="contacts-header__label">Время работы:</div>
+									<div class="contacts-header__time">пн-пт:
+										<time datetime="10:30">10:30</time>-
+										<time datetime="21:00">21:00</time> сб-вс:
+										<time datetime="10:30">10:30</time>-
+										<time datetime="21:00">21:00</time>
+									</div>
+									<div class="contacts-header__notice">1-2 января выходной</div>
+								</div>
+							</div>
+						</div>
+						<div class="main-header__actions actions-header">
+							<div class="actions-header__item">
+								<a class="actions-header__link actions-header__link_user" href="#">
+									<div class="actions-header__top">
+										<span class="actions-header__icon"></span>
+									</div>Вход
+								</a>
+							</div>
+							<div class="actions-header__item">
+								<a class="actions-header__link actions-header__link_favorites" href="#">
+									<div class="actions-header__top">
+										<span class="actions-header__icon"></span>
+										<span class="actions-header__count">58</span>
+									</div>Избранное
+								</a>
+							</div>
+							<div class="actions-header__item">
+								<a class="actions-header__link actions-header__link_cart" href="#">
+									<div class="actions-header__top">
+										<span class="actions-header__icon"></span>
+										<span class="actions-header__count">85</span>
+									</div>Корзина
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<div class="questionary">
+				<section class="main-screen">
+					<div class="container">
+						<div class="main-screen__content">
+							<div class="main-screen__image">
+								<picture>
+									<source srcset="images/main-screen/bg.jpg" media="(min-width: 576px)">
+									<source srcset="images/main-screen/bg-mob.jpg" media="(min-width: 320px)">
+									<img src="images/main-screen/bg.jpg" alt="Верхний баннер">
+								</picture>
+							</div>
+							<div class="main-screen__info">
+								<h2 class="main-screen__title">Хорошие фотографии живут&nbsp;в&nbsp;Санкт&nbsp;-&nbsp;Петербурге.</h2>
+								<p class="main-screen__subtitle">Просто добавьте свет!</p>
+							</div>
+							<a class="main-screen__btn btn" href="/">Узнать больше</a>
+						</div>
+					</div>
+				</section>
+				<div class="main__body">
+					<div class="container">
+						<div class="main__inner">
+							<aside class="main-aside">
+								<nav class="main-aside__navigation">
+									<ul class="main-aside__list">
+										<li class="main-aside__item">
+											<a class="main-aside__link" href="lease.html">Как заказать оборудование</a>
+										</li>
+										<li class="main-aside__item">
+											<a class="active main-aside__link" href="questionary.html">Анкета клиента</a>
+										</li>
+										<li class="main-aside__item">
+											<a class="main-aside__link" href="/">Получение и возврат</a>
+										</li>
+										<li class="main-aside__item">
+											<a class="main-aside__link" href="/">Договор аренды</a>
+										</li>
+										<li class="main-aside__item">
+											<a class="main-aside__link" href="/">Способ оплаты</a>
+										</li>
+										<li class="main-aside__item">
+											<a class="main-aside__link" href="/">Гарантийное покрытие</a>
+										</li>
+									</ul>
+								</nav>
+							</aside>
+							<div class="main-content">
+								<div class="heading">
+									<h2 class="heading__title">Анкета</h2>
+								</div>
+								<form class="questionary__form form-questionary">
+									<div class="form-questionary__groups">
+										<div class="form-questionary__group main-info-group">
+											<div class="form-item">
+												<div class="form-item__caption">Имя*</div>
+												<div class="form-field">
+													<input type="text" name="name">
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">Фамилия*</div>
+												<div class="form-field">
+													<input type="text" name="surname">
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">Отчество</div>
+												<div class="form-field">
+													<input type="text" name="patronymic">
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">Место рождения*</div>
+												<div class="form-field">
+													<input type="text" name="place">
+												</div>
+											</div>
+											<div class="form-item form-item-dates">
+												<div class="form-item__caption">Дата рождения*</div>
+												<div class="form-field calendar-day">
+													<input type="date_day" placeholder="Выберите день" readonly>
+													<span class="form-field-arrow"></span>
+												</div>
+												<div class="form-field calendar-month">
+													<input type="date_month" placeholder="Выберите месяц" readonly>
+													<span class="form-field-arrow"></span>
+												</div>
+												<div class="form-field calendar-year">
+													<input type="date_year" placeholder="Выберите год" readonly>
+													<span class="form-field-arrow"></span>
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">Гражданство*</div>
+												<div class="custom-dropdown">
+													<div class="custom-dropdown__wrapper" data-dropdown>
+														<div class="custom-dropdown__btn" data-dropdown-button>Россия</div>
+														<ul class="custom-dropdown__list select-list" data-dropdown-list>
+															<li class="select-list__item" data-value="Россия">Россия</li>
+															<li class="select-list__item" data-value="Беларусь">Беларусь</li>
+															<li class="select-list__item" data-value="Украина">Украина</li>
+															<li class="select-list__item" data-value="Германия">Германия</li>
+															<li class="select-list__item" data-value="Польша">Польша</li>
+														</ul>
+														<input class="custom-dropdown__input" type="hidden" name="nationality">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-questionary__group person-group">
+											<div class="form-questionary__heading">Удостоверение личности
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">Вид удостоверения личности (можно указать свой вариант)*</div>
+												<div class="custom-dropdown custom-dropdown-action">
+													<div class="custom-dropdown__wrapper" data-dropdown>
+														<div class="custom-dropdown__btn-wrap">
+															<input class="custom-dropdown__input" type="text" name="person_nationality" value="Паспорт">
+															<button class="custom-dropdown__btn-delete" type="button"></button>
+															<div class="custom-dropdown__btn" data-dropdown-button></div>
+														</div>
+														<ul class="custom-dropdown__list select-list" data-dropdown-list>
+															<li class="select-list__item" data-value="Паспорт">Паспорт</li>
+															<li class="select-list__item" data-value="Вид на жительство">Вид на жительство</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">Серия*</div>
+												<div class="form-field">
+													<input type="text" name="person_passport_series">
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">Номер*</div>
+												<div class="form-field">
+													<input type="text" name="person_passport_number">
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">Код подразделения*</div>
+												<div class="form-field">
+													<input type="text" name="person_passport_code">
+												</div>
+											</div>
+											<div class="form-item form-item-dates">
+												<div class="form-item__caption">Дата выдачи*</div>
+												<div class="form-field calendar-day">
+													<input type="person_passport_day" placeholder="Выберите день" readonly>
+													<span class="form-field-arrow"></span>
+												</div>
+												<div class="form-field calendar-month">
+													<input type="person_passport_month" placeholder="Выберите месяц" readonly>
+													<span class="form-field-arrow"></span>
+												</div>
+												<div class="form-field calendar-year">
+													<input type="person_passport_year" placeholder="Выберите год" readonly>
+													<span class="form-field-arrow"></span>
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">Кем выдан*</div>
+												<div class="form-field">
+													<input type="text" name="person_passport_issued">
+												</div>
+											</div>
+										</div>
+										<div class="form-questionary__group">
+											<div class="form-questionary__heading">Адрес проживания
+												<button class="form-questionary__heading-action" type="button">Скопировать адрес проживания</button>
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">Страна*</div>
+												<div class="custom-dropdown">
+													<div class="custom-dropdown__wrapper" data-dropdown>
+														<div class="custom-dropdown__btn" data-dropdown-button>Россия</div>
+														<ul class="custom-dropdown__list select-list" data-dropdown-list>
+															<li class="select-list__item" data-value="Россия">Россия</li>
+															<li class="select-list__item" data-value="Беларусь">Беларусь</li>
+															<li class="select-list__item" data-value="Украина">Украина</li>
+															<li class="select-list__item" data-value="Германия">Германия</li>
+															<li class="select-list__item" data-value="Польша">Польша</li>
+														</ul>
+														<input class="custom-dropdown__input" type="hidden" name="address_country">
+													</div>
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">Регион</div>
+												<div class="form-field">
+													<input type="text" name="address_region" placeholder="Название региона, области">
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">Населенный пункт*</div>
+												<div class="form-field">
+													<input type="text" name="address_locality" placeholder="Город, поселок, село...">
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">Улица*</div>
+												<div class="form-field">
+													<input type="text" name="address_street" placeholder="Улица, бульвар, шоссе...">
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">№ дома, строение, корпус*</div>
+												<div class="form-field">
+													<input type="text" name="address_house" placeholder="№ дома, строение...">
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">№ квартиры</div>
+												<div class="form-field">
+													<input type="text" name="address_apartment" placeholder="Введите номер квартиры">
+												</div>
+											</div>
+										</div>
+										<div class="form-questionary__group">
+											<div class="form-questionary__heading">Адрес прописки
+												<button class="form-questionary__heading-action" type="button">Скопировать адрес прописки</button>
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">Страна*</div>
+												<div class="custom-dropdown">
+													<div class="custom-dropdown__wrapper" data-dropdown>
+														<div class="custom-dropdown__btn" data-dropdown-button>Россия</div>
+														<ul class="custom-dropdown__list select-list" data-dropdown-list>
+															<li class="select-list__item" data-value="Россия">Россия</li>
+															<li class="select-list__item" data-value="Беларусь">Беларусь</li>
+															<li class="select-list__item" data-value="Украина">Украина</li>
+															<li class="select-list__item" data-value="Германия">Германия</li>
+															<li class="select-list__item" data-value="Польша">Польша</li>
+														</ul>
+														<input class="custom-dropdown__input" type="hidden" name="registration_address_country">
+													</div>
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">Регион</div>
+												<div class="form-field">
+													<input type="text" name="registration_address_region" placeholder="Название региона, области">
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">Населенный пункт*</div>
+												<div class="form-field">
+													<input type="text" name="registration_address_locality" placeholder="Город, поселок, село...">
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">Улица*</div>
+												<div class="form-field">
+													<input type="text" name="registration_address_street" placeholder="Улица, бульвар, шоссе...">
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">№ дома, строение, корпус*</div>
+												<div class="form-field">
+													<input type="text" name="registration_address_house" placeholder="№ дома, строение...">
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">№ квартиры</div>
+												<div class="form-field">
+													<input type="text" name="registration_address_apartment" placeholder="Введите номер квартиры">
+												</div>
+											</div>
+											<div class="form-item form-item-dates">
+												<div class="form-item__caption">Дата прописки*</div>
+												<div class="form-field calendar-day">
+													<input type="registration_person_passport_day" placeholder="Выберите день" readonly>
+													<span class="form-field-arrow"></span>
+												</div>
+												<div class="form-field calendar-month">
+													<input type="registration_person_passport_month" placeholder="Выберите месяц" readonly>
+													<span class="form-field-arrow"></span>
+												</div>
+												<div class="form-field calendar-year">
+													<input type="registration_person_passport_year" placeholder="Выберите год" readonly>
+													<span class="form-field-arrow"></span>
+												</div>
+											</div>
+										</div>
+										<div class="form-questionary__group">
+											<div class="form-questionary__heading">Копии страниц удостоверения личности
+											</div>
+											<div class="content">
+												<p>Загрузите копии следующих страниц:</p>
+												<ol>
+													<li>Разворот 2-3 страниц паспорта (с фотографией)</li>
+													<li>Разворот страниц с действкющей регистрацией</li>
+													<li>Разворот страниц с информацией о ранее выданных паспортах (18-19 стр.), даже если страницы пустые</li>
+												</ol>
+												<p class="red">Просьба отправлять только СКАН документов. Фото к рассмотрению не принимаются.</p>
+											</div>
+											<div class="drop-boxes">
+												<div class="drop-box" id="drop-one">
+													<label class="form-container" data-load-file>
+														<span class="drop-box__icon"></span>
+														<span class="drop-box__text">Перетащите файлы, вставьте или <span class="red">выберите</span>
+														</span>
+														<input class="form-file" type="file" data-upload-file>
+													</label>
+													<div class="files-list-container" data-file-list></div>
+												</div>
+												<div class="drop-box" id="drop-two">
+													<label class="form-container" data-load-file>
+														<span class="drop-box__icon"></span>
+														<span class="drop-box__text">Перетащите файлы, вставьте или <span class="red">выберите</span>
+														</span>
+														<input class="form-file" type="file" data-upload-file>
+													</label>
+													<div class="files-list-container" data-file-list></div>
+												</div>
+												<div class="drop-box" id="drop-free">
+													<label class="form-container" data-load-file>
+														<span class="drop-box__icon"></span>
+														<span class="drop-box__text">Перетащите файлы, вставьте или <span class="red">выберите</span>
+														</span>
+														<input class="form-file" type="file" data-upload-file>
+													</label>
+													<div class="files-list-container" data-file-list></div>
+												</div>
+											</div>
+										</div>
+										<div class="form-questionary__group additionally-group">
+											<div class="form-questionary__heading">Дополнительно
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">Место работы (учёбы)</div>
+												<div class="form-field">
+													<input type="text" name="additionally_place">
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">Профессия, должность</div>
+												<div class="form-field">
+													<input type="text" name="additionally_profession">
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">Мобильный телефон*</div>
+												<div class="form-field">
+													<input type="tel" name="additionally_phone">
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">Рабочий телефон</div>
+												<div class="form-field">
+													<input type="text" name="additionally_work_phone">
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">Домашний телефон</div>
+												<div class="form-field">
+													<input type="text" name="additionally_home_phone">
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">Ежемесячный доход</div>
+												<div class="form-field">
+													<input type="text" name="additionally_income">
+												</div>
+											</div>
+										</div>
+										<div class="form-questionary__group clients-group">
+											<div class="form-questionary__heading">Может ли кто то из наших клиентов поручить за Вас?
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">ФИО</div>
+												<div class="form-field">
+													<input type="text" name="client_name">
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">Телефон</div>
+												<div class="form-field">
+													<input type="tel" name="client_phone">
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">ФИО</div>
+												<div class="form-field">
+													<input type="text" name="client_name">
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">Телефон</div>
+												<div class="form-field">
+													<input type="tel" name="client_phone">
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">ФИО</div>
+												<div class="form-field">
+													<input type="text" name="client_name">
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-item__caption">Телефон</div>
+												<div class="form-field">
+													<input type="tel" name="client_phone">
+												</div>
+											</div>
+										</div>
+									</div>
+									<button class="btn" type="submit">Отправить </button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<section class="partners">
+					<div class="container">
+						<div class="partners__heading heading">
+							<h2 class="heading__title">Наши партнеры</h2>
+						</div>
+						<div class="partners__wrapper swiper">
+							<div class="partners__body swiper-wrapper">
+								<div class="partners__item item-partner swiper-slide">
+									<div class="item-partner__image">
+										<picture>
+											<source srcset="images/partners/rekam.png" media="(min-width: 767.98px)">
+											<source srcset="images/partners/rekam-mobile.png" media="(min-width: 320px)">
+											<img src="images/partners/rekam-mobile.png" alt="rekam">
+										</picture>
+									</div>
+								</div>
+								<div class="partners__item item-partner swiper-slide">
+									<div class="item-partner__image">
+										<picture>
+											<source srcset="images/partners/nikon.png" media="(min-width: 767.98px)">
+											<source srcset="images/partners/nikon-mobile.png" media="(min-width: 320px)">
+											<img src="images/partners/nikon-mobile.png" alt="nikon">
+										</picture>
+									</div>
+								</div>
+								<div class="partners__item item-partner swiper-slide">
+									<div class="item-partner__image">
+										<picture>
+											<source srcset="images/partners/canon.png" media="(min-width: 767.98px)">
+											<source srcset="images/partners/canon-mobile.png" media="(min-width: 320px)">
+											<img src="images/partners/canon-mobile.png" alt="canon">
+										</picture>
+									</div>
+								</div>
+								<div class="partners__item item-partner swiper-slide">
+									<div class="item-partner__image">
+										<picture>
+											<source srcset="images/partners/sony.png" media="(min-width: 767.98px)">
+											<source srcset="images/partners/sony-mobile.png" media="(min-width: 320px)">
+											<img src="images/partners/sony-mobile.png" alt="sony">
+										</picture>
+									</div>
+								</div>
+								<div class="partners__item item-partner swiper-slide">
+									<div class="item-partner__image">
+										<picture>
+											<source srcset="images/partners/olimpus.png" media="(min-width: 767.98px)">
+											<source srcset="images/partners/olimpus-mobile.png" media="(min-width: 320px)">
+											<img src="images/partners/olimpus-mobile.png" alt="olimpus">
+										</picture>
+									</div>
+								</div>
+								<div class="partners__item item-partner swiper-slide">
+									<div class="item-partner__image">
+										<picture>
+											<source srcset="images/partners/jinbel.png" media="(min-width: 767.98px)">
+											<source srcset="images/partners/jinbel-mobile.png" media="(min-width: 320px)">
+											<img src="images/partners/jinbel-mobile.png" alt="jinbel">
+										</picture>
+									</div>
+								</div>
+								<div class="partners__item item-partner swiper-slide">
+									<div class="item-partner__image">
+										<picture>
+											<source srcset="images/partners/rekam.png" media="(min-width: 767.98px)">
+											<source srcset="images/partners/rekam-mobile.png" media="(min-width: 320px)">
+											<img src="images/partners/rekam-mobile.png" alt="rekam">
+										</picture>
+									</div>
+								</div>
+								<div class="partners__item item-partner swiper-slide">
+									<div class="item-partner__image">
+										<picture>
+											<source srcset="images/partners/nikon.png" media="(min-width: 767.98px)">
+											<source srcset="images/partners/nikon-mobile.png" media="(min-width: 320px)">
+											<img src="images/partners/nikon-mobile.png" alt="nikon">
+										</picture>
+									</div>
+								</div>
+								<div class="partners__item item-partner swiper-slide">
+									<div class="item-partner__image">
+										<picture>
+											<source srcset="images/partners/canon.png" media="(min-width: 767.98px)">
+											<source srcset="images/partners/canon-mobile.png" media="(min-width: 320px)">
+											<img src="images/partners/canon-mobile.png" alt="canon">
+										</picture>
+									</div>
+								</div>
+								<div class="partners__item item-partner swiper-slide">
+									<div class="item-partner__image">
+										<picture>
+											<source srcset="images/partners/sony.png" media="(min-width: 767.98px)">
+											<source srcset="images/partners/sony-mobile.png" media="(min-width: 320px)">
+											<img src="images/partners/sony-mobile.png" alt="sony">
+										</picture>
+									</div>
+								</div>
+								<div class="partners__item item-partner swiper-slide">
+									<div class="item-partner__image">
+										<picture>
+											<source srcset="images/partners/olimpus.png" media="(min-width: 767.98px)">
+											<source srcset="images/partners/olimpus-mobile.png" media="(min-width: 320px)">
+											<img src="images/partners/olimpus-mobile.png" alt="olimpus">
+										</picture>
+									</div>
+								</div>
+								<div class="partners__item item-partner swiper-slide">
+									<div class="item-partner__image">
+										<picture>
+											<source srcset="images/partners/jinbel.png" media="(min-width: 767.98px)">
+											<source srcset="images/partners/jinbel-mobile.png" media="(min-width: 320px)">
+											<img src="images/partners/jinbel-mobile.png" alt="jinbel">
+										</picture>
+									</div>
+								</div>
+							</div>
+							<div class="partners__controls slider-controls">
+								<button class="slider-button slider-button-prev" type="button"></button>
+								<button class="slider-button slider-button-next" type="button"></button>
+							</div>
+						</div>
+						<div class="partners__pagination slider-pagination"></div>
+					</div>
+				</section>
+				<div class="video-block">
+					<div class="container">
+						<div class="video-block__slider" data-slider="video">
+							<div class="video-block__wrapper swiper">
+								<div class="video-block__body swiper-wrapper">
+									<div class="video-block__item item-video swiper-slide" data-slide>
+										<div class="item-video__image">
+											<a href="files/fotogora.mp4" data-fslightbox="gallery">
+												<video class="video-player" poster="images/video-block/1.png">
+													<source src="files/fotogora.mp4" type="video/mp4">
+												</video>
+											</a>
+										</div>
+										<button class="item-video__play play-button" type="button"></button>
+										<div class="item-video__content">
+											<div class="item-video__description">КАДРИРОВАНИЕ ПРИ СЪЕМКЕ ПОРТРЕТОВ КРУПНЫМ ПЛАНОМ</div>
+											<div class="item-video__info info-video">
+												<div class="info-video__item info-video__message">1250</div>
+												<div class="info-video__item info-video__views">18</div>
+											</div>
+										</div>
+									</div>
+									<div class="video-block__item item-video swiper-slide" data-slide>
+										<div class="item-video__image">
+											<a href="files/fotogora.mp4" data-fslightbox="gallery">
+												<video class="video-player" poster="images/video-block/2.png">
+													<source src="files/fotogora.mp4" type="video/mp4">
+												</video>
+											</a>
+										</div>
+										<button class="item-video__play play-button" type="button"></button>
+										<div class="item-video__content">
+											<div class="item-video__description">КАДРИРОВАНИЕ ПРИ СЪЕМКЕ ПОРТРЕТОВ КРУПНЫМ ПЛАНОМ</div>
+											<div class="item-video__info info-video">
+												<div class="info-video__item info-video__message">1250</div>
+												<div class="info-video__item info-video__views">18</div>
+											</div>
+										</div>
+									</div>
+									<div class="video-block__item item-video swiper-slide" data-slide>
+										<div class="item-video__image">
+											<a href="files/fotogora.mp4" data-fslightbox="gallery">
+												<video class="video-player" poster="images/video-block/3.png">
+													<source src="files/fotogora.mp4" type="video/mp4">
+												</video>
+											</a>
+										</div>
+										<button class="item-video__play play-button" type="button"></button>
+										<div class="item-video__content">
+											<div class="item-video__description">КАДРИРОВАНИЕ ПРИ СЪЕМКЕ ПОРТРЕТОВ КРУПНЫМ ПЛАНОМ</div>
+											<div class="item-video__info info-video">
+												<div class="info-video__item info-video__message">1250</div>
+												<div class="info-video__item info-video__views">18</div>
+											</div>
+										</div>
+									</div>
+									<div class="video-block__item item-video swiper-slide" data-slide>
+										<div class="item-video__image">
+											<a href="files/fotogora.mp4" data-fslightbox="gallery">
+												<video class="video-player" poster="images/video-block/1.png">
+													<source src="files/fotogora.mp4" type="video/mp4">
+												</video>
+											</a>
+										</div>
+										<button class="item-video__play play-button" type="button"></button>
+										<div class="item-video__content">
+											<div class="item-video__description">КАДРИРОВАНИЕ ПРИ СЪЕМКЕ ПОРТРЕТОВ КРУПНЫМ ПЛАНОМ</div>
+											<div class="item-video__info info-video">
+												<div class="info-video__item info-video__message">1250</div>
+												<div class="info-video__item info-video__views">18</div>
+											</div>
+										</div>
+									</div>
+									<div class="video-block__item item-video swiper-slide" data-slide>
+										<div class="item-video__image">
+											<a href="files/fotogora.mp4" data-fslightbox="gallery">
+												<video class="video-player" poster="images/video-block/2.png">
+													<source src="files/fotogora.mp4" type="video/mp4">
+												</video>
+											</a>
+										</div>
+										<button class="item-video__play play-button" type="button"></button>
+										<div class="item-video__content">
+											<div class="item-video__description">КАДРИРОВАНИЕ ПРИ СЪЕМКЕ ПОРТРЕТОВ КРУПНЫМ ПЛАНОМ</div>
+											<div class="item-video__info info-video">
+												<div class="info-video__item info-video__message">1250</div>
+												<div class="info-video__item info-video__views">18</div>
+											</div>
+										</div>
+									</div>
+									<div class="video-block__item item-video swiper-slide" data-slide>
+										<div class="item-video__image">
+											<a href="files/fotogora.mp4" data-fslightbox="gallery">
+												<video class="video-player" poster="images/video-block/3.png">
+													<source src="files/fotogora.mp4" type="video/mp4">
+												</video>
+											</a>
+										</div>
+										<button class="item-video__play play-button" type="button"></button>
+										<div class="item-video__content">
+											<div class="item-video__description">КАДРИРОВАНИЕ ПРИ СЪЕМКЕ ПОРТРЕТОВ КРУПНЫМ ПЛАНОМ</div>
+											<div class="item-video__info info-video">
+												<div class="info-video__item info-video__message">1250</div>
+												<div class="info-video__item info-video__views">18</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="video-block__controls slider-controls">
+									<button class="slider-button slider-button-prev" type="button"></button>
+									<button class="slider-button slider-button-next" type="button"></button>
+								</div>
+							</div>
+							<div class="video-block__pagination slider-pagination"></div>
+						</div>
+					</div>
+				</div>
+				<div class="banner-telegram">
+					<div class="container">
+						<div class="banner-telegram__body">
+							<div class="banner-telegram__image">
+								<picture>
+									<source srcset="images/banner/banner-tg.png" media="(min-width: 767.98px)">
+									<source srcset="images/banner/banner-tg-mob.png" media="(min-width: 320px)">
+									<img src="images/banner/banner-tg.png" alt="Баннер подписка на телеграм">
+								</picture>
+							</div>
+							<div class="banner-telegram__text">Подпишись на наш канал в Телеграм</div>
+							<a class="banner-telegram__button btn" href="/">Узнать больше</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__body">
+					<div class="footer__column">
+						<a class="footer__logo" href="/">
+							<picture>
+								<source srcset="images/footer-logo.svg" media="(min-width: 767.98px)">
+								<source srcset="images/footer-logo-mobile.svg" media="(min-width: 320px)">
+								<img src="images/footer-logo.svg" alt="логотип фотогора">
+							</picture>
+						</a>
+						<div class="footer__links">
+							<a class="footer__link footer__link_subscribe" href="/">Подписка на новости</a>
+							<a class="footer__link footer__link_phone" href="tel:74953631098">+7(495) 363-10-98</a>
+							<a class="footer__link footer__link_email" href="mailto:333@photogora.ru">333@photogora.ru</a>
+						</div>
+					</div>
+					<div class="footer__column">
+						<nav class="footer__menu menu-footer">
+							<ul class="menu-footer__list">
+								<li class="menu-footer__item">
+									<a class="menu-footer__link" href="#">Каталог</a>
+								</li>
+								<li class="menu-footer__item">
+									<a class="menu-footer__link" href="#">Оплата и доставка</a>
+								</li>
+								<li class="menu-footer__item">
+									<a class="menu-footer__link" href="#">Новости</a>
+								</li>
+								<li class="menu-footer__item">
+									<a class="menu-footer__link" href="#">Услуги</a>
+								</li>
+								<li class="menu-footer__item">
+									<a class="menu-footer__link" href="#">Контакты</a>
+								</li>
+								<li class="menu-footer__item">
+									<a class="menu-footer__link" href="#">Блог</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="footer__column">
+						<div class="footer__left">
+							<div class="footer__social social-footer">
+								<ul class="social-footer__list">
+									<li class="social-footer__item">
+										<a class="social-footer__link social-footer__link_youtube" href="#"></a>
+									</li>
+									<li class="social-footer__item">
+										<a class="social-footer__link social-footer__link_email" href="#"></a>
+									</li>
+									<li class="social-footer__item">
+										<a class="social-footer__link social-footer__link_vk" href="#"></a>
+									</li>
+									<li class="social-footer__item">
+										<a class="social-footer__link social-footer__link_twitter" href="#"></a>
+									</li>
+									<li class="social-footer__item">
+										<a class="social-footer__link social-footer__link_telegram" href="#"></a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer__copy">© 2013-2023 Фотогора. Все права защищены.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="scripts/main.min.js?_v=20241104140550" defer></script>
+</body>
+
+</html>

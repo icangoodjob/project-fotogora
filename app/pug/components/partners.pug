@@ -1,0 +1,17 @@
+section.partners
+    .container 
+        .partners__heading.heading
+            h2.heading__title Наши партнеры
+        .partners__wrapper.swiper
+            .partners__body.swiper-wrapper
+                each item, index in partners
+                    .partners__item.item-partner.swiper-slide
+                        .item-partner__image 
+                            picture
+                                source(srcset=`images/partners/${item.name}.png` media="(min-width: 767.98px)")
+                                source(srcset=`images/partners/${item.name}-mobile.png` media="(min-width: 320px)")
+                                img(src=`images/partners/${item.name}-mobile.png`, alt=item.name)
+            .partners__controls.slider-controls
+                button(type="button").slider-button.slider-button-prev
+                button(type="button").slider-button.slider-button-next
+        .partners__pagination.slider-pagination

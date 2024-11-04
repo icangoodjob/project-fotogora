@@ -1,0 +1,484 @@
+.personal {
+  padding: 20px 0 28px;
+  overflow: hidden;
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "welcome welcome"
+      "orders buy"
+      "data sale"
+      "appeal sale"
+      "mailings sale"
+      "photo rental";
+    gap: 24px;
+    @media screen and (max-width: $xxl) {
+      grid-template-areas:
+        "welcome welcome"
+        "orders orders"
+        "buy buy"
+        "data data"
+        "appeal appeal"
+        "mailings mailings"
+        "sale sale"
+        "rental rental"
+        "photo photo";
+    }
+  }
+  &__welcome {
+    grid-area: welcome;
+  }
+}
+.heading {
+  &__title {
+  }
+}
+.welcome-personal {
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+  background: $whiteColor;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  align-items: center;
+  grid-template-areas:
+    "logo title"
+    "logo text";
+  gap: 8px 16px;
+  &__icon {
+    grid-area: logo;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  &__title {
+    grid-area: title;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: $secondFamily;
+    align-self: end;
+  }
+  &__sub-title {
+    grid-area: text;
+    color: #b9b9b9;
+    align-self: start;
+  }
+}
+.personal-box {
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+  background: $whiteColor;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: hidden;
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 10px 16px;
+    flex-wrap: wrap;
+    @media screen and (max-width: $md) {
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      gap: 16px;
+    }
+  }
+  &__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    border-radius: 100%;
+    background: rgba(#b9b9b9, 0.25);
+    display: grid;
+    place-items: center;
+    &::before {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: 20px 20px;
+      background-color: $mainColor;
+    }
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    font-family: $secondFamily;
+    flex-grow: 1;
+  }
+  &__button {
+    border: 1px solid #b9b9b9;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 9px;
+    min-height: 37px;
+    font-size: 14px;
+    text-align: center;
+    color: $mainColor;
+    transition: border-color $time;
+    @media (any-hover: hover) {
+      &:hover {
+        border-color: $mainColor;
+      }
+    }
+    @media screen and (max-width: $md) {
+      grid-column: span 2;
+    }
+  }
+  &.active {
+    & .personal-box {
+      &__icon {
+        background: linear-gradient(180deg, #ff6760 0%, #cf3c35 100%);
+        box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 0.2);
+        &::before {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+  &--orders {
+    grid-area: orders;
+    & .personal-box__icon {
+      &::before {
+        mask-image: url("../images/icons/person/basket-shopping.svg");
+      }
+    }
+  }
+  &--buy {
+    grid-area: buy;
+    & .personal-box__icon {
+      &::before {
+        mask-image: url("../images/icons/person/cart-shopping.svg");
+      }
+    }
+  }
+  &--data {
+    grid-area: data;
+    & .personal-box__icon {
+      &::before {
+        mask-image: url("../images/icons/person/user-pen.svg");
+      }
+    }
+    & .personal-box__list-item {
+      @media screen and (max-width: $md) {
+        & > *:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+  &--appeal {
+    grid-area: appeal;
+    & .personal-box__icon {
+      &::before {
+        mask-image: url("../images/icons/person/message-square-chat.svg");
+      }
+    }
+    & .personal-box__list-item {
+      & > *:last-child {
+        margin-left: 0;
+      }
+    }
+  }
+  &--mailings {
+    grid-area: mailings;
+    & .personal-box__icon {
+      &::before {
+        mask-image: url("../images/icons/person/mobile-signal-out.svg");
+      }
+    }
+    & .personal-box__content {
+      padding: 0 0 0 24px;
+      @media screen and (max-width: $md) {
+        padding: 0;
+      }
+    }
+  }
+  &--sale {
+    grid-area: sale;
+    height: 100%;
+    & .personal-box__icon {
+      &::before {
+        mask-image: url("../images/icons/person/bookmark.svg");
+      }
+    }
+  }
+  &--profile {
+    padding-top: 33px;
+    padding-bottom: 33px;
+    position: relative;
+    isolation: isolate;
+    @media screen and (max-width: $md) {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+    & .personal-box__icon {
+      &::before {
+        mask-image: url("../images/icons/person/star.svg");
+      }
+    }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 230px;
+      height: 202px;
+      right: 0;
+      bottom: 0;
+      background-image: url("../images/icons/person/profile-star.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      z-index: -1;
+      pointer-events: none;
+      @media screen and (max-width: $xxxl) {
+        width: 130px;
+        height: 130px;
+        background-size: 130px 130px;
+      }
+      @media screen and (max-width: $lg) {
+        content: none;
+      }
+    }
+  }
+  &--photo {
+    grid-area: photo;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+    background: linear-gradient(
+      90deg,
+      $whiteColor,
+      rgba(64, 179, 244, 0.2) 0%,
+      rgba(64, 179, 244, 0.2) 100%
+    );
+    & .personal-box__icon {
+      &::before {
+        mask-image: url("../images/icons/person/image-circle.svg");
+      }
+    }
+    & .personal-box__button {
+      min-width: 129px;
+      background-color: $whiteColor;
+    }
+  }
+  &--rental {
+    grid-area: rental;
+    position: relative;
+    isolation: isolate;
+    & .personal-box__icon {
+      &::before {
+        mask-image: url("../images/icons/person/refresh-ccw-alt.svg");
+      }
+    }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 204px;
+      height: 169px;
+      right: 16px;
+      bottom: 0;
+      background-image: url("../images/icons/person/rental-icon.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      z-index: -1;
+      pointer-events: none;
+      @media screen and (max-width: $xxxl) {
+        width: 130px;
+        height: 130px;
+        background-size: 130px 130px;
+      }
+      @media screen and (max-width: $lg) {
+        content: none;
+      }
+    }
+  }
+  &__content {
+    padding: 0 calc(27px - 16px) 0 calc(72px - 16px);
+    font-size: 16px;
+    line-height: 120%;
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 19px;
+    justify-items: start;
+    & .personal-box__button {
+      margin-left: 0;
+    }
+    @media screen and (max-width: $md) {
+      padding: 0;
+    }
+  }
+  &__list {
+    @include reset-list;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-self: stretch;
+  }
+  &__list-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    & > *:last-child {
+      margin-left: auto;
+      @media screen and (max-width: $md) {
+        margin-left: 0;
+      }
+    }
+    @media screen and (max-width: $md) {
+      flex-direction: column;
+      align-items: flex-start;
+      &:not(:last-child) {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #d9d9d9;
+      }
+    }
+  }
+  &__date {
+    color: #b9b9b9;
+  }
+  &__email,
+  &__phone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: $mainColor;
+    &::before {
+      content: "";
+      display: block;
+      width: 19px;
+      height: 19px;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      background-color: #b9b9b9;
+    }
+  }
+  &__price {
+    font-weight: 700;
+    font-size: 20px;
+    font-family: $secondFamily;
+    color: #cf3c35;
+  }
+  &__email {
+    &::before {
+      mask-image: url("../images/icons/person/mail.svg");
+    }
+  }
+  &__phone {
+    &::before {
+      mask-image: url("../images/icons/person/square-phone.svg");
+    }
+  }
+  &__checkbox-list {
+    @include reset-list;
+    justify-self: stretch;
+    & .checkbox {
+      min-height: 40px;
+      display: flex;
+      align-items: center;
+    }
+    & .custom-checkbox {
+      width: 18px;
+      height: 18px;
+      border-radius: 2px;
+    }
+  }
+  &__text {
+    max-width: 312px;
+    font-size: 14px;
+    line-height: 120%;
+  }
+  &__button {
+  }
+  &__image {
+    margin-left: 28px;
+  }
+  & .card-product {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+    background: $whiteColor;
+    border-radius: 10px;
+    transition: opacity $time;
+    &:not(.swiper-slide-visible) {
+      opacity: 0;
+    }
+    &__body {
+      padding: 13px 6px 6px;
+    }
+    &__image {
+      height: 187px;
+    }
+    &__header {
+      padding: 6px 15px 19px;
+    }
+    &__title {
+      margin-bottom: 13px;
+      font-size: 14px;
+      line-height: 120%;
+    }
+    &__price {
+      font-size: 20px;
+      color: $mainColor;
+    }
+    &__badge {
+      top: 16px;
+    }
+  }
+}
+.personal-slider {
+  padding-right: 11px;
+  @media screen and (max-width: $md) {
+    padding: 0;
+  }
+  & .swiper {
+    padding: 15px;
+    margin: -15px;
+    overflow: hidden;
+  }
+  &__pagination {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+  }
+  .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+  .swiper-pagination-horizontal.swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    margin: 0;
+  }
+  & .swiper-pagination-bullet {
+    margin: 0;
+    height: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #c2c2c2;
+    transition: background-color $time;
+    &-active {
+      background-color: $mainColor;
+    }
+  }
+}
+
+.blue-link {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  color: #307ff5;
+  border-bottom: 1px solid currentColor;
+  transition: border-color $time;
+  @media (any-hover: hover) {
+    &:hover {
+      border-color: transparent;
+    }
+  }
+}
+.checkbox {
+  &__label {
+  }
+}

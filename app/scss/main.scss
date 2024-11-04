@@ -31,59 +31,59 @@
 // @import "../../node_modules/air-datepicker/air-datepicker.css"; // Datepicker: npm i air-datepicker -S, site: https://air-datepicker.com/ru
 
 body {
-	background-image: url("../images/wrapper-bg.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center 47px;
-	@media screen and (max-width: $lg) {
-		background-size: 100% auto;
-		background-position: center 10px;
-	}
-	// Скролл заблокирован
-	&.lock {
-		overflow: hidden;
-		touch-action: none;
-	}
-	// Сайт загружен
-	.loaded & {
-	}
+  background-image: url("../images/wrapper-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 47px;
+  @media screen and (max-width: $lg) {
+    background-size: 100% auto;
+    background-position: center 10px;
+  }
+  // Скролл заблокирован
+  &.lock {
+    overflow: hidden;
+    touch-action: none;
+  }
+  // Сайт загружен
+  .loaded & {
+  }
 }
 
 .workemail {
-	display: none;
+  display: none;
 }
 .wrapper {
-	width: 100%;
-	min-height: 100vh;
-	overflow: clip;
-	display: flex;
-	flex-direction: column;
-	// Прижимаем footer
-	> main {
-		flex: 1 1 auto;
-	}
-	// Фикс для слайдеров
-	> * {
-		min-width: 0;
-	}
+  width: 100%;
+  min-height: 100vh;
+  overflow: clip;
+  display: flex;
+  flex-direction: column;
+  // Прижимаем footer
+  > main {
+    flex: 1 1 auto;
+  }
+  // Фикс для слайдеров
+  > * {
+    min-width: 0;
+  }
 }
 .main {
-	padding-bottom: 25px;
-	@media screen and (max-width: $md) {
-		padding-bottom: 20px;
-	}
+  padding-bottom: 25px;
+  @media screen and (max-width: $md) {
+    padding-bottom: 20px;
+  }
 }
 .header {
-	flex-shrink: 0;
+  flex-shrink: 0;
 }
 .footer {
-	flex-shrink: 0;
+  flex-shrink: 0;
 }
 //<ОСНОВНАЯ СЕТКА>===========================================================================================================
 .container {
-	max-width: $maxWidthContainer + px;
-	margin: 0 auto;
-	padding: 0 math.div($containerPadding, 2) + px;
+  max-width: $maxWidthContainer + px;
+  margin: 0 auto;
+  padding: 0 math.div($containerPadding, 2) + px;
 }
 //<ОСНОВНАЯ СЕТКА>===========================================================================================================
 
@@ -102,9 +102,12 @@ body {
 @import "components/pagination";
 
 // Подключение стилей для отдельных блоков
-@import "blocks/home";
-@import "blocks/card";
-@import "blocks/catalog";
+@import "pages/home";
+@import "pages/card";
+@import "pages/catalog";
+@import "pages/lease";
+@import "pages/questionary";
+@import "pages/personal";
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>==============================================================================
 

@@ -10,3 +10,49 @@ mixin checkbox(inputName, inputValue, status)
 			input(type="checkbox" name=inputName value=inputValue class="real-checkbox" checked=status)
 			span.custom-checkbox
 			| !{inputValue}
+mixin formItem(caption, classNames)
+	.form-item(class=classNames)
+		.form-item__caption= caption
+		if block 
+			block
+mixin formInput(inputType, inputName, inputPlaceholder)
+	.form-field
+		input(type=inputType, name=inputName, placeholder=inputPlaceholder)
+mixin formInputDate(attrs, inputType, inputType, inputPlaceholder)
+	.form-field(class=attrs)
+		input(type=inputType, name=inputName, placeholder=inputPlaceholder readonly)
+		span.form-field-arrow
+mixin customDropdown([...dropList], currentValue, dropdownInputName)
+	.custom-dropdown
+		.custom-dropdown__wrapper(data-dropdown)
+			.custom-dropdown__btn(data-dropdown-button)= currentValue
+			ul.custom-dropdown__list.select-list(data-dropdown-list)
+				each item in dropList
+					li.select-list__item(data-value=item)= item
+			input(type="hidden" name=dropdownInputName).custom-dropdown__input
+mixin customDropdownAction([...dropList], currentValue, dropdownInputName)
+	.custom-dropdown.custom-dropdown-action
+		.custom-dropdown__wrapper(data-dropdown)
+			.custom-dropdown__btn-wrap
+				input(type="text" name=dropdownInputName value=currentValue).custom-dropdown__input
+				button(type="button").custom-dropdown__btn-delete
+				.custom-dropdown__btn(data-dropdown-button)
+			ul.custom-dropdown__list.select-list(data-dropdown-list)
+				each item in dropList
+					li.select-list__item(data-value=item)= item
+mixin dropBox(id)
+	.drop-box(id=id)
+		label.form-container(data-load-file)
+			span.drop-box__icon
+			span.drop-box__text Перетащите файлы, вставьте или #[span.red выберите]
+			input.form-file(type="file" data-upload-file)
+		.files-list-container(data-file-list)
+mixin formGroup(title, button, classNames)
+	.form-questionary__group(class=classNames)
+		if title
+			.form-questionary__heading
+				| #{title}
+				if button
+					button(type="button").form-questionary__heading-action= button
+		if block 
+			block

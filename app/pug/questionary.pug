@@ -1,0 +1,119 @@
+extends includes/layout.pug
+
+append variables
+	- let pageTitle = "Анкета клиента";
+	- description += pageTitle;
+block content
+	.questionary
+		include ./components/main-screen
+		.main__body 
+			.container
+				.main__inner
+					include ./components/main-aside
+					.main-content 
+						.heading
+							h2.heading__title Анкета
+						form.questionary__form.form-questionary
+							.form-questionary__groups
+								+formGroup(null, null, 'main-info-group')
+									+formItem("Имя*")
+										+formInput("text", "name")
+									+formItem("Фамилия*")
+										+formInput("text", "surname")
+									+formItem("Отчество")
+										+formInput("text", "patronymic")
+									+formItem("Место рождения*")
+										+formInput("text", "place")
+									+formItem("Дата рождения*", 'form-item-dates')
+										+formInputDate('calendar-day', "text", "date_day", "Выберите день")
+										+formInputDate('calendar-month', "text", "date_month", "Выберите месяц")
+										+formInputDate('calendar-year', "text", "date_year", "Выберите год")
+									+formItem("Гражданство*")
+										+customDropdown([...dropdown.country], "Россия", "nationality")
+								+formGroup("Удостоверение личности", null, 'person-group')
+									+formItem("Вид удостоверения личности (можно указать свой вариант)*")
+										+customDropdownAction([...dropdown.nationality], "Паспорт", "person_nationality")
+									+formItem("Серия*")
+										+formInput("text", "person_passport_series")
+									+formItem("Номер*")
+										+formInput("text", "person_passport_number")
+									+formItem("Код подразделения*")
+										+formInput("text", "person_passport_code")
+									+formItem("Дата выдачи*", 'form-item-dates')
+										+formInputDate('calendar-day', "text", "person_passport_day", "Выберите день")
+										+formInputDate("calendar-month", "text", "person_passport_month", "Выберите месяц")
+										+formInputDate("calendar-year", "text", "person_passport_year", "Выберите год")
+									+formItem("Кем выдан*")
+										+formInput("text", "person_passport_issued")
+								+formGroup("Адрес проживания", "Скопировать адрес проживания")
+									+formItem("Страна*")
+										+customDropdown([...dropdown.country], "Россия", "address_country")
+									+formItem("Регион")
+										+formInput("text", "address_region", "Название региона, области")
+									+formItem("Населенный пункт*")
+										+formInput("text", "address_locality", "Город, поселок, село...")
+									+formItem("Улица*")
+										+formInput("text", "address_street", "Улица, бульвар, шоссе...")
+									+formItem("№ дома, строение, корпус*")
+										+formInput("text", "address_house", "№ дома, строение...")
+									+formItem("№ квартиры")
+										+formInput("text", "address_apartment", "Введите номер квартиры")
+								+formGroup("Адрес прописки", "Скопировать адрес прописки")
+									+formItem("Страна*")
+										+customDropdown([...dropdown.country], "Россия", "registration_address_country")
+									+formItem("Регион")
+										+formInput("text", "registration_address_region", "Название региона, области")
+									+formItem("Населенный пункт*")
+										+formInput("text", "registration_address_locality", "Город, поселок, село...")
+									+formItem("Улица*")
+										+formInput("text", "registration_address_street", "Улица, бульвар, шоссе...")
+									+formItem("№ дома, строение, корпус*")
+										+formInput("text", "registration_address_house", "№ дома, строение...")
+									+formItem("№ квартиры")
+										+formInput("text", "registration_address_apartment", "Введите номер квартиры")
+									+formItem("Дата прописки*", 'form-item-dates')
+										+formInputDate("calendar-day", "text", "registration_person_passport_day", "Выберите день")
+										+formInputDate("calendar-month", "text", "registration_person_passport_month", "Выберите месяц")
+										+formInputDate("calendar-year", "text", "registration_person_passport_year", "Выберите год")
+								+formGroup("Копии страниц удостоверения личности")
+									.content
+										p Загрузите копии следующих страниц:
+										ol 
+											li Разворот 2-3 страниц паспорта (с фотографией)
+											li Разворот страниц с действкющей регистрацией
+											li Разворот страниц с информацией о ранее выданных паспортах (18-19 стр.), даже если страницы пустые
+										p.red Просьба отправлять только СКАН документов. Фото к рассмотрению не принимаются.
+									.drop-boxes
+										+dropBox('drop-one')
+										+dropBox('drop-two')
+										+dropBox('drop-free')
+								+formGroup("Дополнительно", null, "additionally-group")
+									+formItem("Место работы (учёбы)")
+										+formInput("text", "additionally_place")
+									+formItem("Профессия, должность")
+										+formInput("text", "additionally_profession")
+									+formItem("Мобильный телефон*")
+										+formInput("tel", "additionally_phone")
+									+formItem("Рабочий телефон")
+										+formInput("text", "additionally_work_phone")
+									+formItem("Домашний телефон")
+										+formInput("text", "additionally_home_phone")
+									+formItem("Ежемесячный доход")
+										+formInput("text", "additionally_income")
+								+formGroup("Может ли кто то из наших клиентов поручить за Вас?", null, "clients-group")
+									+formItem("ФИО")
+										+formInput("text", "client_name")
+									+formItem("Телефон")
+										+formInput("tel", "client_phone")
+									+formItem("ФИО")
+										+formInput("text", "client_name")
+									+formItem("Телефон")
+										+formInput("tel", "client_phone")
+									+formItem("ФИО")
+										+formInput("text", "client_name")
+									+formItem("Телефон")
+										+formInput("tel", "client_phone")
+							button(type="submit").btn Отправить 
+		include ./components/partners
+		include ./components/video-block
+		include ./components/banner-telegram

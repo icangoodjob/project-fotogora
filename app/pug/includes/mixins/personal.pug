@@ -1,0 +1,34 @@
+mixin personalBox(title, button, classNames)
+    .personal-box(class=classNames)
+        .personal-box__header
+            .personal-box__icon 
+            .personal-box__title= title
+            if button
+                a(href="/").personal-box__button= button
+        if block 
+            block
+mixin productCardSmall(item)
+    article.products-item.card-product.card-product-small(data-slide)
+        if item.badge
+            .card-product__badge 
+                span= item.badge
+        .card-product__header
+            a(href="card.html").card-product__image
+                .card-product__switch.image-switch
+                    .image-switch__item
+                        .image-switch__picture 
+                            img(src=`images/products/1.png`, alt=item.title)
+                    .image-switch__item
+                        .image-switch__picture 
+                            img(src=`images/products/2.png`, alt=item.title)
+                    .image-switch__item
+                        .image-switch__picture 
+                            img(src=`images/products/3.png`, alt=item.title)
+            .card-product__pagination.image-pagination
+        .card-product__body
+            .card-product__info
+                h3.card-product__title= item.title
+            .card-product__footer
+                .card-product__prices
+                    div.card-product__price= item.price
+                        |&nbsp;₽

@@ -4,18 +4,7 @@ append variables
 	- let pageTitle = "Главная";
 	- description += pageTitle;
 block content
-	section.main-screen
-		.container 
-			.main-screen__content
-				.main-screen__image 
-					picture
-						source(srcset=`images/main-screen/bg.jpg` media="(min-width: 576px)")
-						source(srcset=`images/main-screen/bg-mob.jpg` media="(min-width: 320px)")
-						img(src="images/main-screen/bg.jpg", alt="Верхний баннер")
-				.main-screen__info
-					h2.main-screen__title Хорошие фотографии живут&nbsp;в&nbsp;Санкт&nbsp;-&nbsp;Петербурге.
-					p.main-screen__subtitle Просто добавьте свет!
-				a(href="/").main-screen__btn.btn Узнать больше
+	include ./components/main-screen
 	div.offers
 		.container 
 			.offers__wrapper 
@@ -93,51 +82,6 @@ block content
 					button(type="button").slider-button.slider-button-prev
 					button(type="button").slider-button.slider-button-next
 				.advantages__pagination.slider-pagination
-	section.partners
-		.container 
-			.partners__heading.heading
-				h2.heading__title Наши партнеры
-			.partners__wrapper.swiper
-				.partners__body.swiper-wrapper
-					each item, index in partners
-						.partners__item.item-partner.swiper-slide
-							.item-partner__image 
-								picture
-									source(srcset=`images/partners/${item.name}.png` media="(min-width: 767.98px)")
-									source(srcset=`images/partners/${item.name}-mobile.png` media="(min-width: 320px)")
-									img(src=`images/partners/${item.name}-mobile.png`, alt=item.name)
-				.partners__controls.slider-controls
-					button(type="button").slider-button.slider-button-prev
-					button(type="button").slider-button.slider-button-next
-			.partners__pagination.slider-pagination
-	div.video-block
-		.container
-			.video-block__slider(data-slider="video")
-				.video-block__wrapper.swiper
-					.video-block__body.swiper-wrapper
-						each item, index in videoBlock
-							.video-block__item.item-video.swiper-slide(data-slide)
-								.item-video__image
-									a(href=`files/fotogora.mp4` data-fslightbox="gallery")
-										video(class="video-player" poster=`images/video-block/${item.img}.png`)
-											source(src="files/fotogora.mp4" type="video/mp4")
-								button(type="button").item-video__play.play-button
-								.item-video__content 
-									.item-video__description= item.text
-									.item-video__info.info-video
-										.info-video__item.info-video__message= item.message
-										.info-video__item.info-video__views= item.views
-					.video-block__controls.slider-controls
-						button(type="button").slider-button.slider-button-prev
-						button(type="button").slider-button.slider-button-next
-				.video-block__pagination.slider-pagination
-	div.banner-telegram
-		.container 
-			.banner-telegram__body
-				.banner-telegram__image
-					picture
-						source(srcset=`images/banner/banner-tg.png` media="(min-width: 767.98px)")
-						source(srcset=`images/banner/banner-tg-mob.png` media="(min-width: 320px)")
-						img(src="images/banner/banner-tg.png", alt="Баннер подписка на телеграм")
-				.banner-telegram__text Подпишись на наш канал в Телеграм
-				a(href="/").banner-telegram__button.btn Узнать больше
+	include ./components/partners
+	include ./components/video-block
+	include ./components/banner-telegram

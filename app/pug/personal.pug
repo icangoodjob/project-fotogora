@@ -1,0 +1,81 @@
+extends includes/layout.pug
+
+append variables
+	- let pageTitle = "Личный кабинет";
+	- description += pageTitle;
+block content
+	.personal
+		.container 
+			.heading
+				h2.heading__title= pageTitle
+			.personal__body 
+				.personal__welcome.welcome-personal 
+					.welcome-personal__icon 
+						img(src="images/personal/welcome.jpg", alt="avatar")
+					.welcome-personal__title Здравствуйте Григорий, добро пожаловать в личный кабинет!
+					.welcome-personal__sub-title Подтвердите электронную почту. Ссылка отправлена на mail@email.com
+				+personalBox("Заказы на сайте", "История заказов", "personal-box--orders active")
+					.personal-box__content
+						ul.personal-box__list 
+							- for (var x = 0; x < 3; x++)	
+								li.personal-box__list-item 
+									span.personal-box__date 22.12.2025
+									span Sony x-123
+									span 134 000 ₽
+				+personalBox("Покупки в магазинах", "История заказов", "personal-box--buy active")
+					.personal-box__content
+						ul.personal-box__list 
+							- for (var x = 0; x < 3; x++)	
+								li.personal-box__list-item 
+									span.personal-box__date 22.12.2025
+									span Sony x-123
+									span 134 000 ₽
+				+personalBox("Личные данные", "Изменить", "personal-box--data")
+					.personal-box__content
+						ul.personal-box__list 
+							li.personal-box__list-item 
+								span Константин Лукин
+								span Бонусные баллы
+							li.personal-box__list-item 
+								a(href="mailto:mail@email.com").personal-box__email mail@email.com
+								span.personal-box__price 1365 ₽
+							li.personal-box__list-item 
+								a(href="tel:+79851234568").personal-box__phone +79851234568
+								a(href="#").blue-link Баланс и детализация
+				+personalBox("Мои обращения", "Смотреть все", "personal-box--appeal")
+					.personal-box__content
+						ul.personal-box__list
+							li.personal-box__list-item 
+									span.personal-box__date 22.12.2025
+									span Информация о пользовательском соглашении
+							- for (var x = 0; x < 2; x++)	
+								li.personal-box__list-item 
+									span.personal-box__date 22.12.2025
+									span Sony x-123
+				+personalBox("Рассылки", null, "personal-box--mailings")
+					.personal-box__content
+						ul.personal-box__checkbox-list 
+							+checkbox("sms", "СМС уведомления", true)
+							+checkbox("sales", "Акции и спецпредложения", false)
+							+checkbox("other", "Прочие уведомления", true)
+				+personalBox("Скидки", "Смотреть все", "personal-box--sale active")
+					.personal-box__slider.personal-slider 
+						.swiper
+							.swiper-wrapper 
+								each item, index in personal.slider 
+									+productCardSmall(item)
+						.personal-slider__pagination
+					+personalBox("Дозаполните профиль", null, "personal-box--profile active")
+						.personal-box__content 
+							.personal-box__text Дозаполните профиль и получайте больше бонусов, предложений, подарков и баллов.
+							a(href="#").personal-box__button Заполнить 
+				+personalBox("Ваш кабинет на ФОТО.ру", "Переход", "personal-box--photo active")
+					.personal-box__image 
+						img(src="images/icons/person/foto-logo.svg", alt="logo")
+				+personalBox("Аренда оборудования", null, "personal-box--rental active")
+					.personal-box__content 
+						.personal-box__text Арендуйте нужное оборудование легко&nbsp;и&nbsp;выгодно!
+						a(href="#").personal-box__button Перейти 
+	include ./components/partners
+	include ./components/video-block
+	include ./components/banner-telegram

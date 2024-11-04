@@ -1,0 +1,10 @@
+div.banner-telegram
+    .container 
+        .banner-telegram__body
+            .banner-telegram__image
+                picture
+                    source(srcset=`images/banner/banner-tg.png` media="(min-width: 767.98px)")
+                    source(srcset=`images/banner/banner-tg-mob.png` media="(min-width: 320px)")
+                    img(src="images/banner/banner-tg.png", alt="Баннер подписка на телеграм")
+            .banner-telegram__text Подпишись на наш канал в Телеграм
+            a(href="/").banner-telegram__button.btn Узнать больше

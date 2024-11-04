@@ -56,6 +56,7 @@
 	},
 	"dependencies": {
 		"fslightbox": "^3.4.1",
-		"swiper": "^10.2.0"
+		"swiper": "^10.2.0",
+		"vanilla-calendar-pro": "^2.9.10"
 	}
 }
